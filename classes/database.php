@@ -12,7 +12,7 @@ class Database
    private $host  = "localhost";
    private $dbuser = "root";
    private $dbpass = "";
-   private $dbname = "snackbar";
+   private $dbname = "roset";
 
    private $conn;
 

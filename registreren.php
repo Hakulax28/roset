@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
    $rol          = $_POST['rol'];
 
    if (count($invoerfouten) == 0) {
-      $sql = "insert into gebruikers(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
+      $sql = "insert into user(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
 									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
       //echo $sql;
       mysqli_query((new Database())->getConnection(), $sql);

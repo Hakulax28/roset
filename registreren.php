@@ -1,4 +1,43 @@
-<?php require 'classes/database.php'; ?>
+<?php
+// variabalen initialiseren
+$voornaam = "";
+$achternaam = "";
+$email = "";
+$wachtwoord = "";
+$telefoon = "";
+$adres = "";
+$postcode = "";
+$woonplaats = "";
+$rol = "";
+
+//connectie met database
+require 'classes/database.php';
+
+// als op registreer wordt gedrukt
+if (isset($_POST['submit'])) {
+   $voornaam     = $_POST['voornaam'];
+   $achternaam    = $_POST['achternaam'];
+   $email          = $_POST['email'];
+   $wachtwoord    = $_POST['wachtwoord'];
+   $telefoon      = $_POST['telefoon'];
+   $adres          = $_POST['adres'];
+   $postcode      = $_POST['postcode'];
+   $stad      = $_POST['stad'];
+   $rol          = $_POST['rol'];
+
+   if (count($invoerfouten) == 0) {
+      $sql = "insert into gebruikers(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
+									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
+      //echo $sql;
+      mysqli_query((new Database())->getConnection(), $sql);
+      header("Location:login.php");
+   } else {
+      foreach ($invoerfouten as $invoerfout) {
+         echo $invoerfout . "<br>";
+      }
+   }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

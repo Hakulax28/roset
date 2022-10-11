@@ -18,9 +18,9 @@
       <p>Achternaam</p>
       <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
       <p>E-Mail</p>
-      <input type="text" name="email" id="" placeholder="Vul je email in" required>
+      <input type="email" name="email" id="" placeholder="Vul je email in" required>
       <p>Wachtwoord</p>
-      <input type="text" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
+      <input type="password" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
       <p>Geboortedatum</p>
       <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
       <p>Telefoonnummer</p>
@@ -34,6 +34,7 @@
       <p>Wat is uw rol?</p>
       <input type="text" name="rol" id="" placeholder="Vul je rol in" required>
       <button type="submit">Inloggen</button>
+      <input type="reset" value="">
    </form>
 </body>
 

@@ -25,17 +25,11 @@ if (isset($_POST['submit'])) {
    $stad      = $_POST['stad'];
    $rol          = $_POST['rol'];
 
-   if (count($invoerfouten) == 0) {
-      $sql = "insert into user(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
+   $sql = "insert into user(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
 									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
-      //echo $sql;
-      mysqli_query((new Database())->getConnection(), $sql);
-      header("Location:login.php");
-   } else {
-      foreach ($invoerfouten as $invoerfout) {
-         echo $invoerfout . "<br>";
-      }
-   }
+   //echo $sql;
+   mysqli_query((new Database())->getConnection(), $sql);
+   header("Location:inloggen.php");
 }
 ?>
 

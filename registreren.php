@@ -15,25 +15,25 @@
 <body>
    <form action="inloggen.php" method="post">
       <p>Voornaam</p>
-      <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in">
+      <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
       <p>Achternaam</p>
-      <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in">
+      <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
       <p>E-Mail</p>
-      <input type="text" name="email" id="" placeholder="Vul je email in">
+      <input type="text" name="email" id="" placeholder="Vul je email in" required>
       <p>Wachtwoord</p>
-      <input type="text" name="wachtwoord" id="" placeholder="Vul je wachtwoord in">
+      <input type="text" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
       <p>Geboortedatum</p>
-      <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in">
+      <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
       <p>Telefoonnummer</p>
-      <input type="tel" name="telefoonnummer" id="" placeholder="Vul je telefoonnummer in">
+      <input type="tel" name="telefoonnummer" id="" placeholder="Vul je telefoonnummer in" required>
       <p>Adres</p>
-      <input type="text" name="adres" id="" placeholder="Vul je adres in">
+      <input type="text" name="adres" id="" placeholder="Vul je adres in" required>
       <p>Postcode</p>
-      <input type="text" name="postcode" id="" placeholder="Vul je postcode in">
+      <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
       <p>Stad</p>
-      <input type="text" name="stad" id="" placeholder="Vul je stad in">
+      <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
       <p>Wat is uw rol?</p>
-      <input type="text" name="rol" id="" placeholder="Vul je rol in">
+      <input type="text" name="rol" id="" placeholder="Vul je rol in" required>
       <button type="submit">Inloggen</button>
    </form>
 </body>

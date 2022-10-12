@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
       require 'classes/database.php';
       $sql = "UPDATE product SET 
          naam = '$naam', 
-         prijs_per_kg = '$prijs_per_kgm', 
+         prijs_per_kg = '$prijs_per_kg', 
          smaak_van_de_week = '$smaak_van_de_week', 
          categorie = '$categorie' WHERE id = '$id'  ";
 

@@ -1,33 +1,45 @@
 <?php
-// variabalen initialiseren
-$voornaam = "";
-$achternaam = "";
-$email = "";
-$wachtwoord = "";
-$telefoon = "";
-$adres = "";
-$postcode = "";
-$woonplaats = "";
-$rol = "";
 
-//connectie met database
-require 'classes/database.php';
+if (isset($_POST["submit"])) {
 
-// als op registreer wordt gedrukt
-if (isset($_POST['submit'])) {
-   $voornaam     = $_POST['voornaam'];
-   $achternaam    = $_POST['achternaam'];
-   $email          = $_POST['email'];
-   $wachtwoord    = $_POST['wachtwoord'];
-   $telefoon      = $_POST['telefoon'];
-   $adres          = $_POST['adres'];
-   $postcode      = $_POST['postcode'];
-   $stad      = $_POST['stad'];
-   $rol          = $_POST['rol'];
+   if (
+      !empty($_POST["voornaam"])
+      && !empty($_POST["achternaam"])
+      && !empty($_POST["email"])
+      && !empty($_POST["wachtwoord"])
+      && !empty($_POST["geboortedatum"])
+      && !empty($_POST["telefoon"])
+      && !empty($_POST["adres"])
+      && !empty($_POST["postcode"])
+      && !empty($_POST["stad"])
+      && !empty($_POST["rol"])
 
-   $sql = "insert into user(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
-									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
-   //echo $sql;
-   mysqli_query((new Database())->getConnection(), $sql);
-   echo header("Location:inloggen.php");
+   ) {
+      // als op registreer wordt gedrukt
+      if (isset($_POST['submit'])) {
+         $voornaam = $_POST['voornaam'];
+         $achternaam = $_POST['achternaam'];
+         $email = trim($_POST["email"]);
+         $wachtwoord = $_POST['wachtwoord'];
+         $geboortedatum = $_POST['geboortedatum'];
+         $telefoon = $_POST['telefoon'];
+         $adres = $_POST['adres'];
+         $postcode = $_POST['postcode'];
+         $stad = $_POST['stad'];
+         $rol = $_POST['rol'];
+
+         //database connectie
+
+         require 'classes/database.php';
+         $sql = "INSERT INTO users (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, woonplaats, rol)
+                VALUES ('$voornaam', '$achternaam', '$email', '$wachtwoord', '$geboortedatum', '$telefoon', '$adres', '$postcode','$stad', '$rol')";
+
+         // Voer de INSERT INTO STATEMENT uit
+         if (mysqli_query((new Database())->getConnection(), $sql)) {
+            header("location: user_overzicht.php");
+         }
+
+         mysqli_close($conn); // Sluit de database verbinding
+      }
+   }
 }

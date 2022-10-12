@@ -37,20 +37,20 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 <body>
    <h1>Update uw gegevens</h1><br>
    <form action="user_update_verwerk.php" method="post">
-      <div class="row">
-         <div class="col-md-6">
+      <div class="row mx-auto">
+         <div class="col-md-3 mx-auto">
             <p>Voornaam</p>
-            <input type="text" name="voornaam" id="" class="form-control" value="<?php echo $user["voornaam"] ?>" placeholder="Vul je voornaam in" required>
+            <input type="text" name="voornaam" id="" class="form-control bg-dark text-white" value="<?php echo $user["voornaam"] ?>" placeholder="Vul je voornaam in" required>
             <p>Achternaam</p>
-            <input type="text" name="achternaam" id="" class="form-control" value="<?php echo $user["achternaam"] ?>" placeholder="Vul je achternaam in" required>
+            <input type="text" name="achternaam" id="" class="form-control bg-dark text-white" value="<?php echo $user["achternaam"] ?>" placeholder="Vul je achternaam in" required>
             <p>E-Mail</p>
-            <input type="email" name="email" id="" class="form-control" value="<?php echo $user["email"] ?>" placeholder="Vul je email in" required>
+            <input type="email" name="email" id="" class="form-control bg-dark text-white" value="<?php echo $user["email"] ?>" placeholder="Vul je email in" required>
             <p>Wachtwoord</p>
-            <input type="password" name="wachtwoord" id="" class="form-control" value="<?php echo $user["wachtwoord"] ?>" placeholder="Vul je wachtwoord in" required>
+            <input type="password" name="wachtwoord" id="" class="form-control bg-dark text-white" value="<?php echo $user["wachtwoord"] ?>" placeholder="Vul je wachtwoord in" required>
             <p>Geboortedatum</p>
-            <input type="date" name="geboortedatum" id="" class="form-control" value="<?php echo $user["geboortedatum"] ?>" placeholder="Vul je geboortedatum in" required>
+            <input type="date" name="geboortedatum" id="" class="form-control bg-dark text-white" value="<?php echo $user["geboortedatum"] ?>" placeholder="Vul je geboortedatum in" required>
          </div>
-         <div class="col-md-6">
+         <div class="col-md-3 mx-auto">
             <p>Telefoonnummer</p>
             <input type="tel" name="telefoonnummer" id="" class="form-control" value="<?php echo $user["telefoon"] ?>" placeholder="Vul je telefoonnummer in" required>
             <p>Adres</p>

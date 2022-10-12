@@ -34,7 +34,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
       <thead>
          <tr>
-            <th>ID</th>
+            <!--<th>ID</th>-->
             <th>Voornaam</th>
             <th>Achternaam</th>
             <th>Email</th>

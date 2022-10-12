@@ -37,6 +37,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <thead>
          <tr>
             <!--<th>ID</th>-->
+            <th>Foto</th>
             <th>De smaak</th>
             <th>Prijs per kilogram</th>
             <th>is het de smaak van de week?</th>
@@ -49,7 +50,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <?php foreach ($products as $product) : ?>
             <tr>
                <!--<td><?php echo $product["id"] ?></td>-->
-               <td><a href="product_info.php"><?php echo $product["naam"] ?></a></td>
+               <td><a href="product_info.php"><?php echo $product["foto"] ?></a></td>
+               <td><?php echo $product["naam"] ?></td>
                <td><?php echo $product["prijs_per_kg"] ?></td>
                <td><?php echo $product["smaak_van_de_week"] ?></td>
                <td><?php echo $product["categorie"] ?></td>

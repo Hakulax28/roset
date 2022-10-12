@@ -28,7 +28,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <h1>Welkom bij Snack'in Sea!</h1>
    </header>
 
-   <a href="registreer-product.php" class="shadow-sm btn btn-success">Voeg een product toe</a>
+   <a href="registreer-product.php" class="shadow btn btn-success">Voeg een product toe</a>
 
    <p></p>
 

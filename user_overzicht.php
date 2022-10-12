@@ -28,8 +28,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    </header>
 
    <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
-   <a href="loguit.php" class="shadow-sm btn btn-danger">Log uit</a>
-   <br>
 
    <table class="table table-striped table-dark">
 

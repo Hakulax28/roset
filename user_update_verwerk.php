@@ -31,7 +31,6 @@ if (isset($_POST["submit"])) {
 
       //database connectie
       require 'classes/database.php';
-
       $sql = "UPDATE users SET 
          voornaam = '$voornaam', 
          achternaam = '$achternaam', 

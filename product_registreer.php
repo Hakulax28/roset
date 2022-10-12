@@ -13,37 +13,25 @@
 <body>
    <h1>Registreer je nu in</h1><br>
 
-   <form action="user_registreer_verwerk.php" method="post">
+   <form action="product_registreer_verwerk.php" method="post">
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
-            <p>Voornaam</p>
-            <input type="text" name="voornaam" id="" class="form-control bg-dark text-white" placeholder="Vul je voornaam in" required>
-            <p>Achternaam</p>
-            <input type="text" name="achternaam" id="" class="form-control bg-dark text-white" placeholder="Vul je achternaam in" required>
-            <p>E-Mail</p>
-            <input type="email" name="email" id="" class="form-control bg-dark text-white" placeholder="Vul je email in" required>
-            <p>Wachtwoord</p>
-            <input type="password" name="wachtwoord" id="" class="form-control bg-dark text-white" placeholder="Vul je wachtwoord in" required>
-            <p>Geboortedatum</p>
-            <input type="date" name="geboortedatum" id="" class="form-control bg-dark text-white" placeholder="Vul je geboortedatum in" required>
+            <p>Naam</p>
+            <input type="text" name="naam" id="" class="form-control bg-dark text-white" placeholder="Vul de naam van de ijs in" required>
+            <p>Prijs per Kilogram </p>
+            <input type="text" name="prijs_per_kg" id="" class="form-control bg-dark text-white" placeholder="Vul de prijs in" required>
          </div>
          <div class="col-md-3 mx-auto">
-            <p>Telefoonnummer</p>
-            <input type="tel" name="telefoon" id="" class="form-control" placeholder="Vul je telefoonnummer in" required>
-            <p>Adres</p>
-            <input type="text" name="adres" id="" class="form-control" placeholder="Vul je adres in" required>
-            <p>Postcode</p>
-            <input type="text" name="postcode" id="" class="form-control" placeholder="Vul je postcode in" required>
-            <p>Stad</p>
-            <input type="text" name="stad" id="" class="form-control" placeholder="Vul je stad in" required>
-            <p>Wat is uw rol?</p>
-            <input type="text" name="rol" id="" class="form-control" placeholder="Vul je rol in" required>
+            <p>De smaak van de week</p>
+            <input type="text" name="smaak_van_de_week" id="" class="form-control" placeholder="Vul de smaak van de week in" required>
+            <p>Categorie</p>
+            <input type="text" name="categorie" id="" class="form-control" placeholder="Vul de categorie in" required>
          </div>
       </div>
       <br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Registreer gebruiker!</button>
-         <a href="user_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+         <a href="product_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
    </form>
 </body>

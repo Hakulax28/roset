@@ -5,7 +5,7 @@
 $sql = "SELECT * FROM user";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
 ?>
@@ -29,6 +29,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
    <a href="loguit.php" class="shadow-sm btn btn-danger">Log uit</a>
+   <br>
 
    <table class="table table-striped table-dark">
 
@@ -49,13 +50,13 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <tbody>
          <?php foreach ($users as $user) : ?>
             <tr>
-               <td><?php echo $user["id"] ?></td>
+               <!--<td><?php echo $user["id"] ?></td>-->
                <td><?php echo $user["voornaam"] ?></td>
                <td><?php echo $user["achternaam"] ?></td>
                <td><?php echo $user["email"] ?></td>
                <td><?php echo $user["wachtwoord"] ?></td>
                <td><?php echo $user["geboortedatum"] ?></td>
-               <td><?php echo $user["telefoonnummer"] ?></td>
+               <td><?php echo $user["telefoon"] ?></td>
                <td><?php echo $user["rol"] ?></td>
                <td><a href="gebruiker-delete.php?id=<?php echo $user["id"] ?>" class="btn btn-danger">Delete</a></td>
                <td><a href="gebruiker-update.php?id=<?php echo $user["id"] ?>" class="btn btn-warning">Update</a></td>

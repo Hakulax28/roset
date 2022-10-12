@@ -37,9 +37,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <thead>
          <tr>
             <!--<th>ID</th>-->
-            <th>De producten</th>
-            <th>Kostprijs</th>
-            <th>Verkoopprijs</th>
+            <th>De smaak</th>
+            <th>Prijs per kilogram</th>
+            <th>is het de smaak van de week?</th>
             <th>Categorie</th>
             <th>Verwijder</th>
             <th>Update</th>
@@ -50,9 +50,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <tr>
                <!--<td><?php echo $product["id"] ?></td>-->
                <td><a href="product-info.php"><?php echo $product["naam"] ?></a></td>
-               <td><?php echo $product["kostprijs"] ?></td>
-               <td><?php echo $product["verkoopprijs"] ?></td>
-               <td><?php echo $product["category"] ?></td>
+               <td><?php echo $product["prijs_per_kg"] ?></td>
+               <td><?php echo $product["smaak_van_de_week"] ?></td>
+               <td><?php echo $product["categorie"] ?></td>
                <td><a href="product-delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Delete</a></td>
                <td><a href="product-update.php?id=<?php echo $product["id"] ?>" class="btn btn-warning">Update</a></td>
             </tr>

@@ -16,8 +16,9 @@ if (isset($_POST["submit"])) {
 
    ) {
       // als op registreer wordt gedrukt 
-      echo '1';
       if (isset($_POST['submit'])) {
+
+
          $voornaam = $_POST['voornaam'];
          $achternaam = $_POST['achternaam'];
          $email = trim($_POST["email"]);
@@ -37,11 +38,8 @@ if (isset($_POST["submit"])) {
 
          // Voer de INSERT INTO STATEMENT uit
          if (mysqli_query((new Database())->getConnection(), $sql)) {
-            echo '1';
-            die;
             header("location: user_overzicht.php");
          }
-
          mysqli_close($conn); // Sluit de database verbinding
       }
    }

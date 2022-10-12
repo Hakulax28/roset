@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 
       //database connectie
       require 'classes/database.php';
-      $sql = "UPDATE user SET 
+      $sql = "UPDATE product SET 
          naam = '$naam', 
          prijs_per_kg = '$prijs_per_kgm', 
          smaak_van_de_week = '$smaak_van_de_week', 

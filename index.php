@@ -2,9 +2,9 @@
 
 session_start();
 
-if (!$_SESSION["is_logged_in"]) {
-   header("location: inloggen.php");
-}
+//if (!$_SESSION["is_logged_in"]) {
+//header("location: inloggen.php");
+//}
 //if ($_SESSION["rol"] == "medewerker") {
 //    echo "U kan nu alles doen";
 //} else if ($_SESSION["rol"] == "klant") {

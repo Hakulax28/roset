@@ -72,7 +72,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    </table>
 
    <footer>
-      <a href="dashboard.php">Ga hier terug</a>
+      <a href="index.php">Ga hier terug</a>
    </footer>
 </body>
 

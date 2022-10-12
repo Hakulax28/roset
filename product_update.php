@@ -40,15 +40,15 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Naam</p>
-            <input type="text" name="naam" id="" class="form-control bg-dark text-white" value="<?php echo $product["voornaam"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+            <input type="text" name="naam" id="" class="form-control bg-dark text-white" value="<?php echo $product["naam"] ?>" placeholder="Vul de naam van de ijs in" required><br>
             <p>Prijs per Kilogram </p>
-            <input type="text" name="prijs_per_kg" id="" class="form-control bg-dark text-white" value="<?php echo $product["voornaam"] ?>" placeholder="Vul de prijs in" required><br>
+            <input type="text" name="prijs_per_kg" id="" class="form-control bg-dark text-white" value="<?php echo $product["prijs_per_kg"] ?>" placeholder="Vul de prijs in" required><br>
          </div>
          <div class="col-md-3 mx-auto">
             <p>De smaak van de week</p>
-            <input type="text" name="smaak_van_de_week" id="" class="form-control" value="<?php echo $product["voornaam"] ?>" placeholder="Vul de smaak van de week in" required><br>
+            <input type="text" name="smaak_van_de_week" id="" class="form-control" value="<?php echo $product["smaak_van_de_week"] ?>" placeholder="Vul de smaak van de week in" required><br>
             <p>Categorie</p>
-            <input type="text" name="categorie" id="" class="form-control" value="<?php echo $product["voornaam"] ?>" placeholder="Vul de categorie in" required><br>
+            <input type="text" name="categorie" id="" class="form-control" value="<?php echo $product["categorie"] ?>" placeholder="Vul de categorie in" required><br>
          </div>
       </div>
       <br>

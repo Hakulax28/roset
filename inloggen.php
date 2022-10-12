@@ -16,9 +16,9 @@
       <p>Wachtwoord</p>
       <input type="text" name="wachtwoord" id="" placeholder="Vul je wachtwoord in">
       <p>Wat is uw rol?</p>
-      <input type="text" name="rol" id="klant">klant<br>
-      <input type="text" name="rol" id="medewerker">medewerker<br>
+      <input type="text" name="rol" id=""><br>
       <button type="submit">Inloggen</button>
+      <a href="registreren.php">Klik hier om te registreren.</a>
    </form>
 </body>
 

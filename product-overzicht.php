@@ -9,12 +9,6 @@ $sql = "SELECT * FROM product";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
-
-if (isset($_POST["submit"])) {
-   $categorie = $_POST["category"];
-
-   $sql = "SELECT *, category as category FROM product WHERE category = '$categorie'";
-}
 ?>
 
 <!DOCTYPE html>

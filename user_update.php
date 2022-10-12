@@ -55,7 +55,10 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <input type="text" name="stad" id="" class="form-control" value="<?php echo $user["stad"] ?>" placeholder="Vul je stad in" required>
       <p>Wat is uw rol?</p>
       <input type="text" name="rol" id="" class="form-control" value="<?php echo $user["rol"] ?>" placeholder="Vul je rol in" required><br>
-      <button type="submit">Update</button>
+      <div class=" form-group">
+         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+         <a href="user_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+      </div><br>
    </form>
 </body>
 

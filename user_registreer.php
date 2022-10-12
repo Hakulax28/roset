@@ -46,28 +46,37 @@ if (isset($_POST['submit'])) {
 
 <body>
    <form action="inloggen.php" method="post">
-      <p>Voornaam</p>
-      <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
-      <p>Achternaam</p>
-      <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
-      <p>E-Mail</p>
-      <input type="email" name="email" id="" placeholder="Vul je email in" required>
-      <p>Wachtwoord</p>
-      <input type="password" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
-      <p>Geboortedatum</p>
-      <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
-      <p>Telefoonnummer</p>
-      <input type="tel" name="telefoonnummer" id="" placeholder="Vul je telefoonnummer in" required>
-      <p>Adres</p>
-      <input type="text" name="adres" id="" placeholder="Vul je adres in" required>
-      <p>Postcode</p>
-      <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
-      <p>Stad</p>
-      <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
-      <p>Wat is uw rol?</p>
-      <input type="text" name="rol" id="" placeholder="Vul je rol in" required>
-      <button type="submit">Inloggen</button>
-      <button type="reset" value="">
+      <div class="row mx-auto">
+         <div class="col-md-3 mx-auto">
+            <p>Voornaam</p>
+            <input type="text" name="voornaam" id="" class="form-control bg-dark text-white" value="<?php echo $user["voornaam"] ?>" placeholder="Vul je voornaam in" required>
+            <p>Achternaam</p>
+            <input type="text" name="achternaam" id="" class="form-control bg-dark text-white" value="<?php echo $user["achternaam"] ?>" placeholder="Vul je achternaam in" required>
+            <p>E-Mail</p>
+            <input type="email" name="email" id="" class="form-control bg-dark text-white" value="<?php echo $user["email"] ?>" placeholder="Vul je email in" required>
+            <p>Wachtwoord</p>
+            <input type="password" name="wachtwoord" id="" class="form-control bg-dark text-white" value="<?php echo $user["wachtwoord"] ?>" placeholder="Vul je wachtwoord in" required>
+            <p>Geboortedatum</p>
+            <input type="date" name="geboortedatum" id="" class="form-control bg-dark text-white" value="<?php echo $user["geboortedatum"] ?>" placeholder="Vul je geboortedatum in" required>
+         </div>
+         <div class="col-md-3 mx-auto">
+            <p>Telefoonnummer</p>
+            <input type="tel" name="telefoonnummer" id="" class="form-control" value="<?php echo $user["telefoon"] ?>" placeholder="Vul je telefoonnummer in" required>
+            <p>Adres</p>
+            <input type="text" name="adres" id="" class="form-control" value="<?php echo $user["adres"] ?>" placeholder="Vul je adres in" required>
+            <p>Postcode</p>
+            <input type="text" name="postcode" id="" class="form-control" value="<?php echo $user["postcode"] ?>" placeholder="Vul je postcode in" required>
+            <p>Stad</p>
+            <input type="text" name="stad" id="" class="form-control" value="<?php echo $user["stad"] ?>" placeholder="Vul je stad in" required>
+            <p>Wat is uw rol?</p>
+            <input type="text" name="rol" id="" class="form-control" value="<?php echo $user["rol"] ?>" placeholder="Vul je rol in" required>
+         </div>
+      </div>
+      <br>
+      <div class=" form-group">
+         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+         <a href="user_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+      </div><br>
    </form>
 </body>
 

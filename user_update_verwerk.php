@@ -2,8 +2,8 @@
 
 if (isset($_POST["submit"])) {
 
-   $id = $_POST["id"];
-
+   $id = $_GET["id"];
+   echo $id;
    if (
       !empty($_POST["voornaam"])
       && !empty($_POST["achternaam"])
@@ -17,6 +17,7 @@ if (isset($_POST["submit"])) {
       && !empty($_POST["rol"])
 
    ) {
+
       //allemaal moeten ze true zijn
       $voornaam = $_POST['voornaam'];
       $achternaam = $_POST['achternaam'];
@@ -31,7 +32,7 @@ if (isset($_POST["submit"])) {
 
       //database connectie
       require 'classes/database.php';
-      $sql = "UPDATE users SET 
+      $sql = "UPDATE user SET 
          voornaam = '$voornaam', 
          achternaam = '$achternaam', 
          email = '$email', 

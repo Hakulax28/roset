@@ -36,7 +36,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
 <body>
    <h1>Update uw gegevens</h1><br>
-   <form action="user_update_verwerk.php" method="post">
+   <form action="user_update_verwerk.php?id=<?php echo $id; ?>" method="post">
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Voornaam</p>

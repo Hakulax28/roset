@@ -17,15 +17,15 @@
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Naam</p>
-            <input type="text" name="naam" id="" class="form-control bg-dark text-white" placeholder="Vul de naam van de ijs in" required>
+            <input type="text" name="naam" id="" class="form-control bg-dark text-white" placeholder="Vul de naam van de ijs in" required><br>
             <p>Prijs per Kilogram </p>
-            <input type="text" name="prijs_per_kg" id="" class="form-control bg-dark text-white" placeholder="Vul de prijs in" required>
+            <input type="text" name="prijs_per_kg" id="" class="form-control bg-dark text-white" placeholder="Vul de prijs in" required><br>
          </div>
          <div class="col-md-3 mx-auto">
             <p>De smaak van de week</p>
-            <input type="text" name="smaak_van_de_week" id="" class="form-control" placeholder="Vul de smaak van de week in" required>
+            <input type="text" name="smaak_van_de_week" id="" class="form-control" placeholder="Vul de smaak van de week in" required><br>
             <p>Categorie</p>
-            <input type="text" name="categorie" id="" class="form-control" placeholder="Vul de categorie in" required>
+            <input type="text" name="categorie" id="" class="form-control" placeholder="Vul de categorie in" required><br>
          </div>
       </div>
       <br>

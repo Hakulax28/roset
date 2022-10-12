@@ -34,9 +34,8 @@ if (isset($_POST["submit"])) {
       <h1>Welkom bij Snack'in Sea!</h1>
    </header>
 
-   <a href="registreer-product.php" class="shadow-sm btn btn-success">Voeg een product toe</a>
-
-   <p></p>
+   <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
+   <a href="loguit.php" class="shadow-sm btn btn-danger">Log uit</a>
 
    <table class="table table-striped table-dark">
 

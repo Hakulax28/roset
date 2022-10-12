@@ -32,7 +32,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    <p></p>
 
-   <table class="table table-striped table-dark">
+   <table class="table table-striped">
 
       <thead>
          <tr>

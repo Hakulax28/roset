@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
 
    if (
       !empty($_POST["voornaam"])
-      && !empty($_POST["achternaam"])
+      || !empty($_POST["achternaam"])
       && !empty($_POST["email"])
       && !empty($_POST["wachtwoord"])
       && !empty($_POST["geboortedatum"])
@@ -15,7 +15,8 @@ if (isset($_POST["submit"])) {
       && !empty($_POST["rol"])
 
    ) {
-      // als op registreer wordt gedrukt
+      // als op registreer wordt gedrukt 
+      echo '1';
       if (isset($_POST['submit'])) {
          $voornaam = $_POST['voornaam'];
          $achternaam = $_POST['achternaam'];
@@ -31,11 +32,13 @@ if (isset($_POST["submit"])) {
          //database connectie
 
          require 'classes/database.php';
-         $sql = "INSERT INTO users (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, woonplaats, rol)
+         $sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, stad, rol)
                 VALUES ('$voornaam', '$achternaam', '$email', '$wachtwoord', '$geboortedatum', '$telefoon', '$adres', '$postcode','$stad', '$rol')";
 
          // Voer de INSERT INTO STATEMENT uit
          if (mysqli_query((new Database())->getConnection(), $sql)) {
+            echo '1';
+            die;
             header("location: user_overzicht.php");
          }
 

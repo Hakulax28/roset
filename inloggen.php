@@ -19,6 +19,7 @@
       <input type="text" name="rol" id=""><br>
       <button type="submit">Inloggen</button>
       <a href="registreren.php">Klik hier om te registreren.</a>
+      <a href="index.php">Klik hier om terug te gaan.</a>
    </form>
 </body>
 

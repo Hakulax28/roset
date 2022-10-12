@@ -6,7 +6,7 @@ $password = $_POST["wachtwoord"];
 
 require 'classes/database.php';
 
-$sql = "SELECT * FROM users WHERE email = '$email' ";
+$sql = "SELECT * FROM user WHERE email = '$email' ";
 
 $result = mysqli_query((new Database())->getConnection(), $sql);
 

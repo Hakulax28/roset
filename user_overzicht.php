@@ -29,6 +29,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
 
+   <p></p>
+
    <table class="table table-striped table-dark">
 
       <thead>

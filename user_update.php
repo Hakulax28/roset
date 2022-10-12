@@ -52,7 +52,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </div>
          <div class="col-md-3 mx-auto">
             <p>Telefoonnummer</p>
-            <input type="tel" name="telefoonnummer" id="" class="form-control" value="<?php echo $user["telefoon"] ?>" placeholder="Vul je telefoonnummer in" required>
+            <input type="tel" name="telefoon" id="" class="form-control" value="<?php echo $user["telefoon"] ?>" placeholder="Vul je telefoonnummer in" required>
             <p>Adres</p>
             <input type="text" name="adres" id="" class="form-control" value="<?php echo $user["adres"] ?>" placeholder="Vul je adres in" required>
             <p>Postcode</p>

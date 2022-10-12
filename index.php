@@ -12,6 +12,7 @@
 
 <body>
    <a href="inloggen.php">test om in te loggen</a>
+   <a href="user_overzicht.php">kijk naar alle gebruikers</a>
 </body>
 
 </html>

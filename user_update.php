@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'classes/database.php';
+require 'classes/user.php';
 
 $id = $_GET["id"]; //17
 
@@ -13,7 +13,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $user = mysqli_fetch_assoc($result);
 
    if (is_null($user)) {
-      header("location: user-overzicht.php");
+      header("location: user_overzicht.php");
    }
 }
 ?>
@@ -25,12 +25,12 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
    <title>De Roset</title>
 </head>
 
 <body>
-   <form action="inloggen.php" method="post">
+   <form action="user_update_verwerk.php" method="post">
       <p>Voornaam</p>
       <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
       <p>Achternaam</p>
@@ -50,9 +50,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <p>Stad</p>
       <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
       <p>Wat is uw rol?</p>
-      <input type="text" name="rol" id="" placeholder="Vul je rol in" required>
-      <button type="submit">Inloggen</button>
-      <button type="reset" value="">
+      <input type="text" name="rol" id="" placeholder="Vul je rol in" required><br>
+      <button type="submit">Update</button>
    </form>
 </body>
 

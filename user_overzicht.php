@@ -64,8 +64,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
                <td><?php echo $user["postcode"] ?></td>
                <td><?php echo $user["stad"] ?></td>
                <td><?php echo $user["rol"] ?></td>
-               <td><a href="gebruiker-delete.php?id=<?php echo $user["id"] ?>" class="btn btn-danger">Delete</a></td>
-               <td><a href="gebruiker-update.php?id=<?php echo $user["id"] ?>" class="btn btn-warning">Update</a></td>
+               <td><a href="user_delete.php?id=<?php echo $user["id"] ?>" class="btn btn-danger">Delete</a></td>
+               <td><a href="user_update.php?id=<?php echo $user["id"] ?>" class="btn btn-warning">Update</a></td>
             </tr>
          <?php endforeach; ?>
       </tbody>

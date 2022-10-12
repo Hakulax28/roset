@@ -4,17 +4,12 @@
 
 // hier moet de info van de anderen tabelen te voor schijn komen. 
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM users ";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
-if (isset($_POST["submit"])) {
-   $categorie = $_POST["category"];
-
-   $sql = "SELECT *, category as category FROM product WHERE category = '$categorie'";
-}
 ?>
 
 <!DOCTYPE html>
@@ -41,25 +36,31 @@ if (isset($_POST["submit"])) {
 
       <thead>
          <tr>
-            <!--<th>ID</th>-->
-            <th>De producten</th>
-            <th>Kostprijs</th>
-            <th>Verkoopprijs</th>
-            <th>Categorie</th>
+            <th>ID</th>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>Email</th>
+            <th>Wachtwoord</th>
+            <th>Geboortedatum</th>
+            <th>Telefoonnummer</th>
+            <th>Rol</th>
             <th>Verwijder</th>
             <th>Update</th>
          </tr>
       </thead>
       <tbody>
-         <?php foreach ($products as $product) : ?>
+         <?php foreach ($users as $user) : ?>
             <tr>
-               <!--<td><?php echo $product["id"] ?></td>-->
-               <td><a href="product-info.php"><?php echo $product["naam"] ?></a></td>
-               <td><?php echo $product["kostprijs"] ?></td>
-               <td><?php echo $product["verkoopprijs"] ?></td>
-               <td><?php echo $product["category"] ?></td>
-               <td><a href="product-delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Delete</a></td>
-               <td><a href="product-update.php?id=<?php echo $product["id"] ?>" class="btn btn-warning">Update</a></td>
+               <td><?php echo $user["id"] ?></td>
+               <td><?php echo $user["voornaam"] ?></td>
+               <td><?php echo $user["achternaam"] ?></td>
+               <td><?php echo $user["email"] ?></td>
+               <td><?php echo $user["wachtwoord"] ?></td>
+               <td><?php echo $user["geboortedatum"] ?></td>
+               <td><?php echo $user["telefoonnummer"] ?></td>
+               <td><?php echo $user["rol"] ?></td>
+               <td><a href="gebruiker-delete.php?id=<?php echo $user["id"] ?>" class="btn btn-danger">Delete</a></td>
+               <td><a href="gebruiker-update.php?id=<?php echo $user["id"] ?>" class="btn btn-warning">Update</a></td>
             </tr>
          <?php endforeach; ?>
       </tbody>

@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
    //echo $sql;
    mysqli_query((new Database())->getConnection(), $sql);
-   header("Location:inloggen.php");
+   echo header("Location:inloggen.php");
 }
 ?>
 
@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
       <p>Wat is uw rol?</p>
       <input type="text" name="rol" id="" placeholder="Vul je rol in" required>
       <button type="submit">Inloggen</button>
-      <input type="reset" value="">
+      <button type="reset" value="">
    </form>
 </body>
 

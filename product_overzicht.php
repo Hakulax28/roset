@@ -19,7 +19,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
    <title>Snack'in Sea</title>
 </head>
 
@@ -32,7 +32,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    <p></p>
 
-   <table class="table table-striped">
+   <table class="table table-striped table-dark">
 
       <thead>
          <tr>
@@ -61,7 +61,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    </table>
 
    <footer>
-      <a href="dashboard.php">Ga hier terug</a>
+      <a href="index.php">Ga hier terug</a>
    </footer>
 </body>
 

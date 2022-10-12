@@ -2,7 +2,7 @@
 
 // hier moet de info van de anderen tabelen te voor schijn komen. 
 
-$sql = "SELECT * FROM users ";
+$sql = "SELECT * FROM user";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);

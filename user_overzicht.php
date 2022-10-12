@@ -26,7 +26,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <header>
       <h1>Welkom bij de Roset!</h1>
    </header>
-
+   <p></p>
    <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
 
    <p></p>
@@ -72,7 +72,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    </table>
 
    <footer>
-      <a href="index.php">Ga hier terug</a>
+      <a href="index.php" class="btn btn-info">Ga hier terug</a>
    </footer>
 </body>
 

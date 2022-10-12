@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+   <a href="inloggen.php">test</a>
 </body>
 
 </html>

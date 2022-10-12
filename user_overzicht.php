@@ -42,6 +42,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <th>Wachtwoord</th>
             <th>Geboortedatum</th>
             <th>Telefoonnummer</th>
+            <th>Adres</th>
+            <th>Postcode</th>
+            <th>Stad</th>
             <th>Rol</th>
             <th>Verwijder</th>
             <th>Update</th>
@@ -57,6 +60,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
                <td><?php echo $user["wachtwoord"] ?></td>
                <td><?php echo $user["geboortedatum"] ?></td>
                <td><?php echo $user["telefoon"] ?></td>
+               <td><?php echo $user["adres"] ?></td>
+               <td><?php echo $user["postcode"] ?></td>
+               <td><?php echo $user["stad"] ?></td>
                <td><?php echo $user["rol"] ?></td>
                <td><a href="gebruiker-delete.php?id=<?php echo $user["id"] ?>" class="btn btn-danger">Delete</a></td>
                <td><a href="gebruiker-update.php?id=<?php echo $user["id"] ?>" class="btn btn-warning">Update</a></td>

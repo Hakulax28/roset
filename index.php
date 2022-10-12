@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if (!$_SESSION["is_logged_in"]) {
+   header("location: inloggen.php");
+}
+//if ($_SESSION["rol"] == "medewerker") {
+//    echo "U kan nu alles doen";
+//} else if ($_SESSION["rol"] == "klant") {
+//    echo "U kan alleen een melding registreren registreren";
+//}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

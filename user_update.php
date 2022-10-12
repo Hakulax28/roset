@@ -1,35 +1,20 @@
 <?php
-// variabalen initialiseren
-$voornaam = "";
-$achternaam = "";
-$email = "";
-$wachtwoord = "";
-$telefoon = "";
-$adres = "";
-$postcode = "";
-$woonplaats = "";
-$rol = "";
 
-//connectie met database
+session_start();
+
 require 'classes/database.php';
 
-// als op registreer wordt gedrukt
-if (isset($_POST['submit'])) {
-   $voornaam     = $_POST['voornaam'];
-   $achternaam    = $_POST['achternaam'];
-   $email          = $_POST['email'];
-   $wachtwoord    = $_POST['wachtwoord'];
-   $telefoon      = $_POST['telefoon'];
-   $adres          = $_POST['adres'];
-   $postcode      = $_POST['postcode'];
-   $stad      = $_POST['stad'];
-   $rol          = $_POST['rol'];
+$id = $_GET["id"]; //17
 
-   $sql = "insert into user(voornaam,achternaam,email,wachtwoord,telefoonnummer,adres,postcode,woonplaats,rol)
-									values('$voornaam','$achternaam','$email','$wachtwoord','$telefoon','$adres','$postcode','$stad','$rol')";
-   //echo $sql;
-   mysqli_query((new Database())->getConnection(), $sql);
-   echo header("Location:inloggen.php");
+$sql = "SELECT * FROM user WHERE id = $id LIMIT 1";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+
+   $user = mysqli_fetch_assoc($result);
+
+   if (is_null($user)) {
+      header("location: user-overzicht.php");
+   }
 }
 ?>
 

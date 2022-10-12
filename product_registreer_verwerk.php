@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
          //database connectie
 
          require 'classes/database.php';
-         $sql = "INSERT INTO user (voornaam, prijs_per_kg, smaak_van_de_week, categorie)
+         $sql = "INSERT INTO product (naam, prijs_per_kg, smaak_van_de_week, categorie)
                 VALUES ('$voornaam', '$prijs_per_kg', '$smaak_van_de_week', '$rol')";
 
          // Voer de INSERT INTO STATEMENT uit

@@ -44,11 +44,11 @@ if (isset($_POST["submit"])) {
          stad =  '$stad',
          rol = '$rol' WHERE id = '$id'  ";
 
-      // Voer de INSERT INTO STATEMENT uit
       if (mysqli_query((new Database())->getConnection(), $sql)) {
          header("location: user_overzicht.php");
       }
-      mysqli_close($conn); // Sluit de database verbinding
 
+      echo "Updated successfully";
+      mysqli_close($conn); // Sluit de database verbinding
    }
 }

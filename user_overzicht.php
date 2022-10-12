@@ -1,6 +1,4 @@
-<?php require 'classes/database.php'; ?>
-
-<?php
+<?php require 'classes/database.php';
 
 // hier moet de info van de anderen tabelen te voor schijn komen. 
 

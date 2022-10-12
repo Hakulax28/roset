@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'classes/user.php';
+//require 'classes/user.php';
 
 require 'classes/database.php';
 

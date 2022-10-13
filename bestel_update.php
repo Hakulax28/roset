@@ -62,7 +62,7 @@ JOIN product ON product.id = orders.product_id";
       </div><br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
-         <a href="bestel-overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+         <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
 
    </form>

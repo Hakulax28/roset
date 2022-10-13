@@ -22,7 +22,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body>
-   <h1>Registreer de smaak</h1><br>
+   <h1>Registreer de bestelling</h1><br>
 
    <form action="bestel_registreer_verwerk.php" method="post">
       <div class="row mx-auto">
@@ -54,7 +54,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
          <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
       </div><br>
       <div class=" form-group">
-         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+         <button type="submit" class="shadow-sm btn btn-info" name="submit">Bestel jouw ijsje!</button>
          <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
    </form>

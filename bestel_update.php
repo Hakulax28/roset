@@ -43,7 +43,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body>
-   <h1>Update de ijsbol</h1><br>
+   <h1>Update de bestelling</h1><br>
    <form action="bestel_update_verwerk.php?id=<?php echo $id; ?>" method="post">
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
@@ -74,7 +74,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
          <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de naam van de ijs in" required><br>
       </div><br>
       <div class=" form-group">
-         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update bestelling!</button>
          <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
 

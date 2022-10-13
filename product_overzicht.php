@@ -50,7 +50,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <?php foreach ($products as $product) : ?>
             <tr>
                <!--<td><?php echo $product["id"] ?></td>-->
-               <!--<td><?php echo $product["foto"] ?></td>-->
+               <!--<td><img src="../image/<?php echo $product["foto"] ?>.jpg" alt="foto" width="100px" height="100px"></td>-->
                <td><?php echo $product["naam"] ?></td>
                <td>€ <?php echo $product["prijs_per_kg"] ?></td>
                <td><?php echo $product["smaak_van_de_week"] ?></td>

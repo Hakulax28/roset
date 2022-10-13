@@ -44,14 +44,14 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
          </div>
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
-            <input type="datetime" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+            <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
             <p>Bezorgd</p>
-            <input type="datetime" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="Vul de prijs in" required><br>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
          </div>
       </div>
       <div class="col-md-3 mx-auto">
          <p>Ontvangen</p>
-         <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+         <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
       </div><br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>

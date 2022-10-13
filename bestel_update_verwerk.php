@@ -5,29 +5,29 @@ if (isset($_POST["submit"])) {
    $id = $_GET["id"];
    echo $id;
    if (
-      !empty($_POST["voornaam"])
-      && !empty($_POST["achternaam"])
-      && !empty($_POST["email"])
-      && !empty($_POST["wachtwoord"])
-      && !empty($_POST["geboortedatum"])
+      !empty($_POST["user"])
+      && !empty($_POST["product"])
+      && !empty($_POST["oppak"])
+      && !empty($_POST["bezorg"])
+      && !empty($_POST["ontvang"])
 
    ) {
 
       //allemaal moeten ze true zijn
-      $voornaam = $_POST['voornaam'];
-      $achternaam = $_POST['achternaam'];
-      $email = trim($_POST["email"]);
-      $wachtwoord = $_POST['wachtwoord'];
-      $geboortedatum = $_POST['geboortedatum'];
+      $user = $_POST['user'];
+      $product = $_POST['product'];
+      $oppak = $_POST["oppak"];
+      $bezorg = $_POST['bezorg'];
+      $ontvang = $_POST['ontvang'];
 
       //database connectie
       require 'classes/database.php';
       $sql = "UPDATE orders SET 
-         voornaam = '$voornaam', 
-         achternaam = '$achternaam', 
-         email = '$email', 
-         wachtwoord = '$wachtwoord',
-         geboortedatum = '$geboortedatum',  WHERE id = '$id'  ";
+         user_id = '$user', 
+         product_id = '$product', 
+         oppak = '$oppak', 
+         bezorg = '$bezorg',
+         ontvang = '$ontvang',  WHERE id = '$id'  ";
 
       if (mysqli_query((new Database())->getConnection(), $sql)) {
          header("location: bestel_overzicht.php");

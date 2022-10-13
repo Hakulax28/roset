@@ -55,10 +55,11 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <?php endforeach ?>
             </select><br>
             <p>De product</p>
-            <?php
-            foreach ($all_products as $use) : ?>
-               <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
-            <?php endforeach ?>
+            <select class="form-select bg-dark text-white" name="product">
+               <?php
+               foreach ($all_products as $use) : ?>
+                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
+               <?php endforeach ?>
             </select><br>
          </div>
          <div class="col-md-3 mx-auto">

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <h1>Registreer je nu in</h1><br>
+   <h1>Registreer de smaak</h1><br>
 
    <form action="product_registreer_verwerk.php" method="post">
       <div class="row mx-auto">
@@ -30,7 +30,7 @@
       </div>
       <br>
       <div class=" form-group">
-         <button type="submit" class="shadow-sm btn btn-info" name="submit">Registreer gebruiker!</button>
+         <button type="submit" class="shadow-sm btn btn-info" name="submit">Registreer de smaak!</button>
          <a href="product_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
    </form>

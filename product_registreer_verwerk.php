@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 
          require 'classes/database.php';
          $sql = "INSERT INTO product (naam, prijs_per_kg, smaak_van_de_week, categorie)
-                VALUES ('$voornaam', '$prijs_per_kg', '$smaak_van_de_week', '$rol')";
+                VALUES ('$naam', '$prijs_per_kg', '$smaak_van_de_week', '$categorie')";
 
          // Voer de INSERT INTO STATEMENT uit
          if (mysqli_query((new Database())->getConnection(), $sql)) {

@@ -3,7 +3,6 @@
 if (isset($_POST["submit"])) {
 
    $id = $_GET["id"];
-   echo $id;
    if (
       !empty($_POST["bezorg"])
       && !empty($_POST["ontvang"])
@@ -17,9 +16,7 @@ if (isset($_POST["submit"])) {
 
       //database connectie
       require 'classes/database.php';
-      $sql = "UPDATE orders SET  
-         bezorg = '$bezorg',
-         ontvang = '$ontvang',  WHERE id = '$id'  ";
+      $sql = "UPDATE orders SET bezorg = '$bezorg', ontvang = '$ontvang' WHERE id = '$id'  ";
 
       if (mysqli_query((new Database())->getConnection(), $sql)) {
          header("location: bestel_overzicht.php");

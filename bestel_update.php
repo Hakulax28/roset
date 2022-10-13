@@ -45,7 +45,7 @@ $result = mysqli_query((new Database())->getConnection(), $sql);
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>De besteller</p>
-            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["voornaam"] ?> <?php echo $order["achternaam"] ?>" disabled>
+            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["achternaam"] ?>" disabled>
             <p>De product</p>
             <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["naam"] ?>" disabled><br>
          </div>

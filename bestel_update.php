@@ -1,14 +1,12 @@
 <?php
+
+session_start();
+
 require 'classes/database.php';
 
 $id = $_GET["id"]; //17
 
 $sql = "SELECT * FROM orders WHERE id = $id LIMIT 1";
-
-$sql = "SELECT *, user.voornaam as user_id, product.naam as product_id
-FROM orders 
-JOIN user ON user.id = orders.user_id 
-JOIN product ON product.id = orders.product_id";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
@@ -18,13 +16,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       header("location: bestel_overzicht.php");
    }
 }
-
 $sql = "SELECT * FROM user";
 $result = mysqli_query((new Database())->getConnection(), $sql);
-
+$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 $sql = "SELECT * FROM product";
 $result = mysqli_query((new Database())->getConnection(), $sql);
+$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
 ?>
 
 <!DOCTYPE html>
@@ -43,15 +42,15 @@ $result = mysqli_query((new Database())->getConnection(), $sql);
    <h1>Update de bestelling</h1><br>
    <form action="bestel_update_verwerk.php?id=<?php echo $id; ?>" method="post">
       <div class="row mx-auto">
-         <div class="col-md-3 mx-auto">
-            <p>De besteller</p>
-            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["achternaam"] ?>" disabled>
-            <p>De product</p>
-            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["naam"] ?>" disabled><br>
-         </div>
+
+
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
-            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" placeholder="" disabled><br>
+            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" disabled><br>
+            <p>Bezorgd</p>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
+         </div>
+         <div class="col-md-3 mx-auto">
             <p>Bezorgd</p>
             <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
          </div>

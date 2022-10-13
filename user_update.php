@@ -2,8 +2,6 @@
 
 session_start();
 
-//require 'classes/user.php';
-
 require 'classes/database.php';
 
 $id = $_GET["id"]; //17

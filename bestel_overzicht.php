@@ -9,7 +9,12 @@ $sql = "SELECT * FROM orders";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
+
+$sql = "";
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,10 +42,11 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <thead>
          <tr>
             <!--<th>ID</th>-->
-            <th>De smaak</th>
-            <th>Prijs per kilogram</th>
-            <th>is het de smaak van de week?</th>
-            <th>Categorie</th>
+            <th>De besteller</th>
+            <th>Welk product</th>
+            <th>Heeft het opgepakt</th>
+            <th>Bezorgd</th>
+            <th>Heeft het ontvangen</th>
             <th>Verwijder</th>
             <th>Update</th>
          </tr>
@@ -48,13 +54,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <tbody>
          <?php foreach ($orders as $order) : ?>
             <tr>
-               <!--<td><?php echo $product["id"] ?></td>-->
-               <td><?php echo $product["naam"] ?></td>
-               <td>€ <?php echo $product["prijs_per_kg"] ?></td>
-               <td><?php echo $product["smaak_van_de_week"] ?></td>
-               <td><?php echo $product["categorie"] ?></td>
-               <td><a href="product_delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Delete</a></td>
-               <td><a href="product_update.php?id=<?php echo $product["id"] ?>" class="btn btn-warning">Update</a></td>
+               <!--<td><?php echo $order["id"] ?></td>-->
+               <td><?php echo $order["user_id"] ?></td>
+               <td>€ <?php echo $order["product_id"] ?></td>
+               <td><?php echo $order["oppak"] ?></td>
+               <td><?php echo $order["bezorg"] ?></td>
+               <td><?php echo $order["ontvang"] ?></td>
+               <td><a href="product_delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Delete</a></td>
+               <td><a href="product_update.php?id=<?php echo $order["id"] ?>" class="btn btn-warning">Update</a></td>
             </tr>
          <?php endforeach; ?>
       </tbody>

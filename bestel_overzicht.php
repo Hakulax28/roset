@@ -30,10 +30,10 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
 <body>
    <header>
-      <h1>Bekijk onze lekkere smaken</h1>
+      <h1>Bekijk onze bestellingen</h1>
    </header>
    <p></p>
-   <a href="product_registreer.php" class="shadow btn btn-success">Voeg een product toe</a>
+   <a href="product_registreer.php" class="shadow btn btn-success">Voeg een bestelling toe</a>
 
    <p></p>
 
@@ -46,7 +46,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <th>Welk product</th>
             <th>Heeft het opgepakt</th>
             <th>Bezorgd</th>
-            <th>Heeft het ontvangen</th>
+            <th>Hoeveel hebben ze ontvangen</th>
             <th>Verwijder</th>
             <th>Update</th>
          </tr>

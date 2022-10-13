@@ -8,6 +8,11 @@ $id = $_GET["id"]; //17
 
 $sql = "SELECT * FROM orders WHERE id = $id LIMIT 1";
 
+$sql = "SELECT *, user.voornaam as user_id, product.naam as product_id
+FROM orders 
+JOIN user ON user.id = orders.user_id 
+JOIN product ON product.id = orders.product_id";
+
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    $order = mysqli_fetch_assoc($result);
@@ -16,13 +21,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       header("location: bestel_overzicht.php");
    }
 }
-
-$sql = "SELECT *, user.voornaam as user_id, product.naam as product_id
-FROM orders 
-JOIN user ON user.id = orders.user_id 
-JOIN product ON product.id = orders.product_id";
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

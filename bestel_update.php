@@ -1,7 +1,4 @@
 <?php
-
-session_start();
-
 require 'classes/database.php';
 
 $id = $_GET["id"]; //17

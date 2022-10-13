@@ -5,22 +5,19 @@ if (isset($_POST["submit"])) {
    $id = $_GET["id"];
    echo $id;
    if (
-      !empty($_POST["oppak"])
-      && !empty($_POST["bezorg"])
+      !empty($_POST["bezorg"])
       && !empty($_POST["ontvang"])
 
    ) {
 
       //allemaal moeten ze true zijn
 
-      $oppak = $_POST["oppak"];
       $bezorg = $_POST['bezorg'];
       $ontvang = $_POST['ontvang'];
 
       //database connectie
       require 'classes/database.php';
-      $sql = "UPDATE orders SET 
-         oppak = '$oppak', 
+      $sql = "UPDATE orders SET  
          bezorg = '$bezorg',
          ontvang = '$ontvang',  WHERE id = '$id'  ";
 

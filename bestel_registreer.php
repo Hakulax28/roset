@@ -46,12 +46,12 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <p>Opgepakt</p>
             <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
             <p>Bezorgd</p>
-            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" disabled><br>
          </div>
       </div>
       <div class="col-md-3 mx-auto">
          <p>Ontvangen</p>
-         <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
+         <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" disabled><br>
       </div><br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Bestel jouw ijsje!</button>

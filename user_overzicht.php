@@ -27,7 +27,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <h1>Welkom bij de Roset!</h1>
    </header>
    <p></p>
-   <a href="user_registreer.php" class="shadow-sm btn btn-success">Nieuwe gebruiker</a>
+   <a href="user_registreer.php" class="shadow btn btn-success">Nieuwe gebruiker</a>
 
    <p></p>
 

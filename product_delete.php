@@ -8,8 +8,8 @@ require 'classes/database.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM user WHERE id = $id";
+$sql = "DELETE FROM product WHERE id = $id";
 
 if (mysqli_query((new Database())->getConnection(), $sql)) {
-   header("location: user_overzicht.php");
+   header("location: product_overzicht.php");
 }

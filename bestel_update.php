@@ -33,29 +33,25 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 </head>
 
 <body>
-
-   <form action="bestel_update_verwerk.php" method="post">
-
-      <input type="hidden" name="id" value="<?php echo $user["id"] ?>">
-      <div class=" form-group">
-         <label for="user">De besteller</label>
-         <input type="text" name="user" id="user" class="form-control" value="<?php echo $user["user_id"] ?>">
-      </div><br>
-      <div class=" form-group">
-         <label for="product">De product</label>
-         <input type="text" name="product" id="product" class="form-control" value="<?php echo $user["product_id"] ?>">
-      </div><br>
-      <div class=" form-group">
-         <label for="oppak">Opgepakt</label>
-         <input type="datetime" name="oppak" id="oppak" class="form-control" value="<?php echo $user["oppak"] ?>">
-      </div><br>
-      <div class=" form-group">
-         <label for="bezorg">Bezorgd</label>
-         <input type="datetime" name="bezorg" id="bezorg" class="form-control" value="<?php echo $user["bezorg"] ?>">
-      </div><br>
-      <div class="form-group">
-         <label for="ontvang">Ontvangt</label>
-         <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $user["ontvang"] ?>">
+   <h1>Update de ijsbol</h1><br>
+   <form action="bestel_update_verwerk.php?id=<?php echo $id; ?>" method="post">
+      <div class="row mx-auto">
+         <div class="col-md-3 mx-auto">
+            <p>De besteller</p>
+            <input type="text" name="user" id="" class="form-control bg-dark text-white" value="<?php echo $order["user_id"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+            <p>De product</p>
+            <input type="text" name="product" id="" class="form-control" value="<?php echo $order["product_id"] ?>" placeholder="Vul de prijs in" required><br>
+         </div>
+         <div class="col-md-3 mx-auto">
+            <p>Opgepakt</p>
+            <input type="datetime" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+            <p>Bezorgd</p>
+            <input type="datetime" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="Vul de prijs in" required><br>
+         </div>
+      </div>
+      <div class="col-md-3 mx-auto">
+         <p>Ontvangen</p>
+         <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de naam van de ijs in" required><br>
       </div><br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>

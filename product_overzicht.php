@@ -37,7 +37,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <thead>
          <tr>
             <!--<th>ID</th>-->
-            <!--<th>Foto</th>-->
+            <th>Foto</th>
             <th>De smaak</th>
             <th>Prijs per kilogram</th>
             <th>is het de smaak van de week?</th>

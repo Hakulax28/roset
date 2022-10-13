@@ -11,5 +11,5 @@ $id = $_GET['id'];
 $sql = "DELETE FROM orders WHERE id = $id";
 
 if (mysqli_query((new Database())->getConnection(), $sql)) {
-   header("location: user_overzicht.php");
+   header("location: bestel_overzicht.php");
 }

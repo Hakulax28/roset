@@ -56,7 +56,7 @@ $sql = "";
             <tr>
                <!--<td><?php echo $order["id"] ?></td>-->
                <td><?php echo $order["user_id"] ?></td>
-               <td>€ <?php echo $order["product_id"] ?></td>
+               <td><?php echo $order["product_id"] ?></td>
                <td><?php echo $order["oppak"] ?></td>
                <td><?php echo $order["bezorg"] ?></td>
                <td><?php echo $order["ontvang"] ?></td>

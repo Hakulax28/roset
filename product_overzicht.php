@@ -4,7 +4,7 @@
 
 // hier moet de info van de anderen tabelen te voor schijn komen. 
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM product ORDER BY naam ASC, naam DESC";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);

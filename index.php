@@ -34,7 +34,7 @@ session_start();
    <a href="hoofdpagina.php" class="shadow btn btn-success">Hoofdpagina</a><br><br>
    <a href="user_overzicht.php" class="shadow btn btn-info">Gebruikers/aanpassingen</a>
    <a href="product_overzicht.php" class="shadow btn btn-info">Alle smaaken</a>
-   <a href="" class="shadow btn btn-info">De bestelingen</a><br><br>
+   <a href="bestel_overzicht.php" class="shadow btn btn-info">De bestelingen</a><br><br>
    <a href="loguit.php" class="shadow btn btn-danger">Log uit</a><br><br>
 </body>
 <footer>

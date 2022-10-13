@@ -4,10 +4,10 @@
 
 // hier moet de info van de anderen tabelen te voor schijn komen. 
 
-$sql = "SELECT * FROM product ORDER BY naam ASC, naam DESC";
+$sql = "SELECT * FROM orders";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 ?>
 
@@ -37,7 +37,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <thead>
          <tr>
             <!--<th>ID</th>-->
-            <th>Foto</th>
             <th>De smaak</th>
             <th>Prijs per kilogram</th>
             <th>is het de smaak van de week?</th>
@@ -47,10 +46,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </tr>
       </thead>
       <tbody>
-         <?php foreach ($products as $product) : ?>
+         <?php foreach ($orders as $order) : ?>
             <tr>
                <!--<td><?php echo $product["id"] ?></td>-->
-               <td><img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px"></td>
                <td><?php echo $product["naam"] ?></td>
                <td>€ <?php echo $product["prijs_per_kg"] ?></td>
                <td><?php echo $product["smaak_van_de_week"] ?></td>

@@ -20,14 +20,11 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 }
 
 $sql = "SELECT * FROM user";
-
 $result = mysqli_query((new Database())->getConnection(), $sql);
-$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 
 $sql = "SELECT * FROM product";
-
 $result = mysqli_query((new Database())->getConnection(), $sql);
-$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -48,19 +45,9 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>De besteller</p>
-            <select class="form-select bg-dark text-white" name="user">
-               <?php
-               foreach ($all_users as $use) : ?>
-                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['voornaam'] ?></option>
-               <?php endforeach ?>
-            </select><br>
+            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["voornaam"] ?>" disabled>
             <p>De product</p>
-            <select class="form-select bg-dark text-white" name="product">
-               <?php
-               foreach ($all_products as $use) : ?>
-                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
-               <?php endforeach ?>
-            </select><br>
+            <input type="text" name="" id="" class="form-control bg-dark text-white" placeholder="<?php echo $order["naam"] ?>" disabled><br>
          </div>
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>

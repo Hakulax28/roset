@@ -31,7 +31,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <select class="form-select bg-dark text-white" name="user">
                <?php
                foreach ($all_users as $use) : ?>
-                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['voornaam'] ?></option>
+                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['voornaam'] ?> <?php echo $use["achternaam"] ?></option>
                <?php endforeach ?>
             </select><br>
             <p>De product</p>

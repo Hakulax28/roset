@@ -6,11 +6,14 @@
 
 $sql = "SELECT * FROM orders";
 
+$sql = "SELECT *, user.voornaam as user_id, product.naam as product_id 
+FROM orders 
+JOIN user ON user.id = orders.user_id
+JOIN product ON product.id = orders.product_id";
+
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
-
-$sql = "";
 
 ?>
 

@@ -64,7 +64,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
    <footer>
       <a href="index.php" class="btn btn-info">Ga hier terug</a>
-   </footer>
+   </footer><br>
 </body>
 
 

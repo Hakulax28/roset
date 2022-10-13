@@ -6,7 +6,7 @@
 
 $sql = "SELECT * FROM orders";
 
-$sql = "SELECT *, user.voornaam as user_id, product.naam as product_id 
+$sql = "SELECT *, user.achternaam as user_id, product.naam as product_id 
 FROM orders 
 JOIN user ON user.id = orders.user_id
 JOIN product ON product.id = orders.product_id";

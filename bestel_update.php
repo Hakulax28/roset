@@ -18,6 +18,16 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       header("location: bestel_overzicht.php");
    }
 }
+
+$sql = "SELECT * FROM user";
+
+$result = mysqli_query((new Database())->getConnection(), $sql);
+$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT * FROM product";
+
+$result = mysqli_query((new Database())->getConnection(), $sql);
+$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +48,18 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>De besteller</p>
-            <input type="text" name="user" id="" class="form-control bg-dark text-white" value="<?php echo $order["user_id"] ?>" placeholder="Vul de naam van de ijs in" required><br>
+            <select class="form-select bg-dark text-white" name="user">
+               <?php
+               foreach ($all_users as $use) : ?>
+                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['voornaam'] ?></option>
+               <?php endforeach ?>
+            </select><br>
             <p>De product</p>
-            <input type="text" name="product" id="" class="form-control" value="<?php echo $order["product_id"] ?>" placeholder="Vul de prijs in" required><br>
+            <?php
+            foreach ($all_products as $use) : ?>
+               <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
+            <?php endforeach ?>
+            </select><br>
          </div>
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>

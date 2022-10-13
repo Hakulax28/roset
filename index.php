@@ -26,9 +26,10 @@ session_start();
 </head>
 
 <body>
-   <a href="loguit.php">Log uit</a><br>
+   <a href="hoofdpagina.php">Ga hier naar de hoofd pagina</a><br>
    <a href="user_overzicht.php">kijk naar alle gebruikers</a>
-   <a href="product_overzicht.php">kijk naar alle smaaken</a>
+   <a href="product_overzicht.php">kijk naar alle smaaken</a><br>
+   <a href="loguit.php">Log uit</a>
 </body>
 
 </html>

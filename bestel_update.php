@@ -47,15 +47,15 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </div><br>
       <div class=" form-group">
          <label for="oppak">Opgepakt</label>
-         <input type="text" name="oppak" id="oppak" class="form-control" value="<?php echo $user["oppak"] ?>">
+         <input type="datetime" name="oppak" id="oppak" class="form-control" value="<?php echo $user["oppak"] ?>">
       </div><br>
       <div class=" form-group">
          <label for="bezorg">Bezorgd</label>
-         <input type="text" name="bezorg" id="bezorg" class="form-control" value="<?php echo $user["bezorg"] ?>">
+         <input type="datetime" name="bezorg" id="bezorg" class="form-control" value="<?php echo $user["bezorg"] ?>">
       </div><br>
       <div class="form-group">
          <label for="ontvang">Ontvangt</label>
-         <input type="date" name="ontvang" id="ontvang" class="form-control" value="<?php echo $user["ontvang"] ?>">
+         <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $user["ontvang"] ?>">
       </div><br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>

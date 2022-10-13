@@ -51,9 +51,9 @@ $result = mysqli_query((new Database())->getConnection(), $sql);
          </div>
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
-            <input type="datetime" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" placeholder="" disabled><br>
+            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" placeholder="" disabled><br>
             <p>Bezorgd</p>
-            <input type="datetime" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
          </div>
       </div>
       <div class="col-md-3 mx-auto">

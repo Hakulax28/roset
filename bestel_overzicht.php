@@ -33,7 +33,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <h1>Bekijk onze bestellingen</h1>
    </header>
    <p></p>
-   <a href="product_registreer.php" class="shadow btn btn-success">Voeg een bestelling toe</a>
+   <a href="bestel_registreer.php" class="shadow btn btn-success">Voeg een bestelling toe</a>
 
    <p></p>
 

@@ -16,9 +16,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 }
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 

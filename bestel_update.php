@@ -65,8 +65,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" required><br>
             <p>Bezorgd</p>
             <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" required><br>
-         </div><br>
-         <div class="col-md-3 mx-auto">
             <p>Ontvangen</p>
             <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" required>
             <br>

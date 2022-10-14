@@ -7,15 +7,12 @@
 .container * {
   background: rgb(255, 88, 158);
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 1px;
   margin-right: 1px;
 }
-
 header {
   display: grid;
-  grid-column-start: 3;
+  grid-column-start: 4;
   grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -23,19 +20,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-gap: 120px;
+  grid-column-gap: 50px;
 }
 
 article {
   display: grid;
-  grid-column-start: 3;
+  grid-column-start: 4;
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 13;
   background-color: rgb(255, 88, 158);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 footer {
@@ -56,7 +50,6 @@ footer {
   grid-row-start: 1;
   grid-row-end: 4;
   background-color: rgb(255, 0, 106);
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
@@ -69,7 +62,6 @@ footer {
   grid-row-start: 4;
   grid-row-end: 10;
   background-color: rgb(255, 88, 158);
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
@@ -84,7 +76,6 @@ footer {
   grid-row-start: 10;
   grid-row-end: 13;
   background-color: rgb(255, 88, 158);
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;

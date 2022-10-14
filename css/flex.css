@@ -30,8 +30,8 @@ article {
   display: grid;
   grid-column-start: 3;
   grid-column-end: 13;
-  grid-row-start: 3;
-  grid-row-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 13;
   background-color: rgb(255, 88, 158);
   display: flex;
   justify-content: center;
@@ -40,9 +40,9 @@ article {
 
 footer {
   display: grid;
-  grid-column-start: 3;
+  grid-column-start: 1;
   grid-column-end: 13;
-  grid-row-start: 11;
+  grid-row-start: 13;
   grid-row-end: 13;
   background-color: rgb(255, 88, 158);
   justify-content: center;
@@ -50,15 +50,24 @@ footer {
 }
 
 .s1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
   background-color: rgb(255, 0, 106);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
-  margin-top: 5px;
   margin-right: 5px;
 }
 .s2 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 10;
   background-color: rgb(255, 88, 158);
   display: flex;
   justify-content: center;
@@ -69,6 +78,11 @@ footer {
 }
 
 .s3 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 10;
+  grid-row-end: 13;
   background-color: rgb(255, 88, 158);
   display: flex;
   justify-content: center;

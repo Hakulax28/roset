@@ -36,15 +36,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
-            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" disabled><br>
+            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" required><br>
             <p>Bezorgd</p>
             <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
-         </div>
+            <p>Ontvangen</p>
+            <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de hoeveelheid in" required><br>
+         </div><br>
       </div>
-      <div class="col-md-3 mx-auto">
-         <p>Ontvangen</p>
-         <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de hoeveelheid in" required><br>
-      </div><br>
+
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
          <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>

@@ -18,12 +18,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 }
 
 $sql = "SELECT * FROM user";
-$result = mysqli_query((new Database())->getConnection(), $sql);
-$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 
 $sql = "SELECT * FROM product";
-$result = mysqli_query((new Database())->getConnection(), $sql);
-$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,16 +64,18 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <p>Opgepakt</p>
             <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" required><br>
             <p>Bezorgd</p>
-            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" placeholder="" required><br>
-            <p>Ontvangen</p>
-            <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" placeholder="Vul de hoeveelheid in" required><br>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" required><br>
          </div><br>
-      </div>
+         <div class="col-md-3 mx-auto">
+            <p>Ontvangen</p>
+            <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" required>
+            <br>
+         </div>
 
-      <div class=" form-group">
-         <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
-         <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
-      </div><br>
+         <div class=" form-group">
+            <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+            <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+         </div><br>
 
    </form>
 

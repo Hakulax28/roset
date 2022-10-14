@@ -6,9 +6,9 @@
 
 $sql = "SELECT * FROM orders";
 
-$sql = "SELECT *, user.achternaam as user_id, product.naam as product_id 
+$sql = "SELECT *, user.achternaam as gebr_id, product.naam as product_id 
 FROM orders 
-JOIN user ON user.id = orders.user_id
+JOIN user ON user.id = orders.gebr_id
 JOIN product ON product.id = orders.product_id";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
@@ -55,7 +55,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <?php foreach ($orders as $order) : ?>
             <tr>
                <!--<td><?php echo $order["ID"] ?></td>-->
-               <td><?php echo $order["user_id"] ?></td>
+               <td><?php echo $order["gebr_id"] ?></td>
                <td><?php echo $order["product_id"] ?></td>
                <td><?php echo $order["oppak"] ?></td>
                <td><?php echo $order["bezorg"] ?></td>

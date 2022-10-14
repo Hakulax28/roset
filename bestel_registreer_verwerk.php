@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
          //database connectie
 
          require 'classes/database.php';
-         $sql = "INSERT INTO orders (user_id, product_id, oppak, bezorg, ontvang) 
+         $sql = "INSERT INTO orders (gebr_id, product_id, oppak, bezorg, ontvang) 
                 VALUES ('$user', '$product', '$oppak', '$bezorg', '$ontvang')";
 
          // Voer de INSERT INTO STATEMENT uit

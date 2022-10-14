@@ -16,7 +16,9 @@ if (isset($_POST["submit"])) {
 
       //database connectie
       require 'classes/database.php';
-      $sql = "UPDATE orders SET bezorg = '$bezorg', ontvang = '$ontvang' WHERE ID = '$id'  ";
+      $sql = "UPDATE orders SET 
+         bezorg = '$bezorg', 
+         ontvang = '$ontvang' WHERE ID = '$id'  ";
 
       if (mysqli_query((new Database())->getConnection(), $sql)) {
          header("location: bestel_overzicht.php");

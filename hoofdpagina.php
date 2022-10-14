@@ -11,9 +11,14 @@
 </head>
 
 <body>
-   <div class="up">
-      <div class="u logo">a</div>
-      <div class="u shop">
+
+   <div class="container">
+      <div class="sidecon">
+         <aside class="side s1">a</aside>
+         <aside class="side s2">a</aside>
+         <aside class="side s3">a</aside>
+      </div>
+      <header class="up">
          <a href="bestellen.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" class="bi bi-bag" viewBox="0 0 16 16">
                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
@@ -40,16 +45,11 @@
                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
             </svg>
          </a>
-      </div>
-   </div>
-   <div class="main">
-      <div class="m svdw">a</div>
-      <div class="m hoofd">a</div>
-      <div class="m fav">a</div>
-   </div>
+      </header>
 
-   <div class="under">
-      <div class="un bestel">a</div>
+      <article class="main">a</article>
+
+      <footer class="under">a</footer>
    </div>
 </body>
 

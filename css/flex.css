@@ -1,0 +1,22 @@
+.main {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 252px 660px 660px 252px;
+  grid-template-rows: 720px;
+}
+.item {
+  background-color: rgb(0, 182, 206);
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-color: aliceblue;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.item1,
+.item4 {
+  background-color: black;
+  border-style: dashed;
+}

@@ -13,11 +13,8 @@
 <body>
 
    <div class="container">
-      <div class="sidecon">
-         <aside class="side s1">a</aside>
-         <aside class="side s2">a</aside>
-         <aside class="side s3">a</aside>
-      </div>
+
+      <aside class="s1">a</aside>
       <header class="up">
          <a href="bestellen.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" class="bi bi-bag" viewBox="0 0 16 16">
@@ -46,11 +43,12 @@
             </svg>
          </a>
       </header>
-
+      <aside class="s2">a</aside>
       <article class="main">a</article>
-
+      <aside class="s3">a</aside>
       <footer class="under">a</footer>
    </div>
+
 </body>
 
 </html>

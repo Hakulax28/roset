@@ -1,11 +1,8 @@
 .container {
   display: grid;
-  grid-template-columns: 2fr;
-}
-.container {
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 10px;
 }
 .container * {
   background: rgb(255, 88, 158);
@@ -15,63 +12,51 @@
   margin-bottom: 1px;
   margin-right: 1px;
 }
-.container {
+
+header {
   display: grid;
-  grid-template-columns: 8fr;
-  grid-template-rows: 5fr;
-  grid-gap: 10px;
-  height: 920px;
-}
-.sidecon {
-  display: grid;
-  grid-template-columns: 2fr;
-}
-.sidecon {
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
-}
-.sidecon * {
-  display: flex;
-  margin-bottom: 1px;
-  margin-right: 1px;
-}
-.sidecon {
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 5fr 6fr 5fr;
-  grid-gap: 10px;
-  height: 800px;
-}
-.up {
-  display: grid;
-  grid-column-start: 2;
-}
-.up {
+  grid-column-start: 3;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
   background-color: rgb(255, 88, 158);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-right: 5px;
-  margin-left: 150px;
   grid-column-gap: 120px;
 }
-.side {
+
+article {
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-.s1 {
+  grid-column-start: 3;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 10;
   background-color: rgb(255, 88, 158);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 13;
+  background-color: rgb(255, 88, 158);
+  justify-content: center;
+  align-items: center;
+}
+
+.s1 {
+  background-color: rgb(255, 0, 106);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
   margin-top: 5px;
   margin-right: 5px;
-  margin-left: 20px;
 }
 .s2 {
   background-color: rgb(255, 88, 158);
@@ -81,8 +66,8 @@
   margin-bottom: 5px;
   margin-top: 5px;
   margin-right: 5px;
-  margin-left: 20px;
 }
+
 .s3 {
   background-color: rgb(255, 88, 158);
   display: flex;
@@ -91,33 +76,4 @@
   margin-bottom: 5px;
   margin-top: 5px;
   margin-right: 5px;
-  margin-left: 20px;
-}
-.main {
-  display: grid;
-  margin-left: 100px;
-}
-.main {
-  background-color: rgb(255, 88, 158);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-right: 5px;
-  margin-left: 150px;
-}
-.under {
-  display: grid;
-  grid-template-rows: 120px;
-}
-.under {
-  background-color: rgb(255, 88, 158);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-right: 5px;
-  margin-left: 150px;
 }

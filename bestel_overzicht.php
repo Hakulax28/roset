@@ -54,14 +54,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <tbody>
          <?php foreach ($orders as $order) : ?>
             <tr>
-               <!--<td><?php echo $order["id"] ?></td>-->
+               <!--<td><?php echo $order["ID"] ?></td>-->
                <td><?php echo $order["user_id"] ?></td>
                <td><?php echo $order["product_id"] ?></td>
                <td><?php echo $order["oppak"] ?></td>
                <td><?php echo $order["bezorg"] ?></td>
                <td><?php echo $order["ontvang"] ?></td>
-               <td><a href="bestel_delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Delete</a></td>
-               <td><a href="bestel_update.php?id=<?php echo $order["id"] ?>" class="btn btn-warning">Update</a></td>
+               <td><a href="bestel_delete.php?ID=<?php echo $order["ID"] ?>" class="btn btn-danger">Delete</a></td>
+               <td><a href="bestel_update.php?ID=<?php echo $order["ID"] ?>" class="btn btn-warning">Update</a></td>
             </tr>
          <?php endforeach; ?>
       </tbody>

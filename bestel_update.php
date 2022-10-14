@@ -4,9 +4,9 @@ session_start();
 
 require 'classes/database.php';
 
-$id = $_GET["id"]; //17
+$id = $_GET["ID"]; //17
 
-$sql = "SELECT * FROM orders WHERE id = $id LIMIT 1";
+$sql = "SELECT * FROM orders WHERE ID = $id LIMIT 1";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 

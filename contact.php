@@ -62,13 +62,19 @@
       <article class="main">
          <h3>Wil je bij ons werken? soliciteer nu!</h3>
          <article class="contact">
+            <p>Naam: </p>
             <input type="text" id="" placeholder="Vul je naam in" required>
+            <p>E-mail: </p>
             <input type="email" id="" placeholder="Vul je email in" required>
+            <p>GeboorteD: </p>
             <input type="date" id="" placeholder="Vul je geboortedatum in" required>
+            <p>Telefoon: </p>
             <input type="tel" id="" placeholder="Vul je telefoonnummer in" required>
+            <p>Adres: </p>
             <input type="text" id="" placeholder="Vul je adres in" required>
             <button>Stuur uw applicatie in</button>
          </article>
+
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">

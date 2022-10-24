@@ -70,7 +70,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">Smaak van de dag</aside>
-      <article class="main">
+      <article class="bestel">
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
             <img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px">

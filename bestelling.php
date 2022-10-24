@@ -73,8 +73,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <article class="bestel">
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
-            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px">
-
+            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="150px" height="150px">
          <?php endforeach; ?><h3 style="text-align: center;">Bekijk de smaken!</h3>
          <br>
 

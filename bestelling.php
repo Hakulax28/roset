@@ -1,3 +1,14 @@
+<?php require 'classes/database.php';
+
+// hier moet de info van alle producten erop komen. 
+
+$sql = "SELECT * FROM product ORDER BY naam ASC, naam DESC";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +25,11 @@
 
    <div class="container">
 
-      <aside class="s1">a</aside>
+      <aside class="s1">
+         <br>
+         <img src="img/logo.png" alt="" height="100px" width="100px">
+         <p>De roset</p>
+      </aside>
       <header class="up">
          <a href="overons">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
@@ -56,20 +71,12 @@
       </header>
       <aside class="s2">a</aside>
       <article class="main">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-         <img src="" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-         <img src="" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
+         <?php foreach ($products as $product) : ?>
+            <tr>
+               <!--<td><?php echo $product["id"] ?></td>-->
+               <td><img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px"></td>
+            </tr>
+         <?php endforeach; ?>
       </article>
       <aside class="s3">a</aside>
       <footer class="under">a</footer>

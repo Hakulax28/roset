@@ -60,20 +60,7 @@
       </header>
       <aside class="s2">Smaak van de dag</aside>
       <article class="main">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-         <img src="" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-         <img src="" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
+         <h1>Wil je bij ons werken? soliciteer nu!</h1>
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">

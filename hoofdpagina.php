@@ -14,7 +14,11 @@
 
    <div class="container">
 
-      <aside class="s1">a</aside>
+      <aside class="s1">
+         <br>
+         <img src="img/logo.png" alt="" height="100px" width="100px">
+         <h3>De Roset</h3>
+      </aside>
       <header class="up">
          <a href="hoofdpagina.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" class="bi bi-person-lines-fill" viewBox="0 0 16 16">

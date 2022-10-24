@@ -31,7 +31,10 @@ article {
   width: 100%;
   flex-wrap: wrap;
 }
-
+article img {
+  margin-left: 150px;
+  justify-content: center;
+}
 footer {
   grid-column-start: 1;
   grid-column-end: 13;

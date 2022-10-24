@@ -16,16 +16,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       header("location: bestel_overzicht.php");
    }
 }
-
-$sql = "SELECT * FROM user";
-if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-}
-
-$sql = "SELECT * FROM product";
-if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-}
 ?>
 
 <!DOCTYPE html>
@@ -44,22 +34,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <h1>Update de bestelling</h1><br>
    <form action="bestel_update_verwerk.php?ID=<?php echo $id; ?>" method="post">
       <div class="row mx-auto">
-         <div class="col-md-3 mx-auto">
-            <p>De besteller</p>
-            <select class="form-select bg-dark text-white" name="user">
-               <?php
-               foreach ($all_users as $use) : ?>
-                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
-               <?php endforeach ?>
-            </select><br>
-            <p>De product</p>
-            <select class="form-select bg-dark text-white" name="product">
-               <?php
-               foreach ($all_products as $use) : ?>
-                  <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
-               <?php endforeach ?>
-            </select><br>
-         </div>
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
             <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" required><br>

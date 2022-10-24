@@ -58,7 +58,7 @@
             <p>Profiel</p>
          </a>
       </header>
-      <aside class="s2">a</aside>
+      <aside class="s2">Smaak van de dag</aside>
       <article class="main">
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
@@ -75,8 +75,11 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
       </article>
-      <aside class="s3">a</aside>
-      <footer class="under">a</footer>
+      <aside class="s3">Populaire smaken</aside>
+      <footer class="under">
+         <h3>Bestelingen</h3>
+         <p></p>
+      </footer>
    </div>
 
 </body>

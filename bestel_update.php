@@ -43,7 +43,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" required>
             <br>
          </div>
-
          <div class=" form-group">
             <button type="submit" class="shadow-sm btn btn-info" name="submit">Update Besteling!</button>
             <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>

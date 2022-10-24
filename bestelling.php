@@ -17,7 +17,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/flex.css">
+   <link rel="stylesheet" href="flex.css">
    <title>De Roset</title>
 </head>
 
@@ -72,10 +72,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <aside class="s2">Smaak van de dag</aside>
       <article class="main">
          <?php foreach ($products as $product) : ?>
-            <tr>
-               <!--<td><?php echo $product["id"] ?></td>-->
-               <td><img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px"></td>
-            </tr>
+            <!--<td><?php echo $product["id"] ?></td>-->
+            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="100px" height="100px">
          <?php endforeach; ?>
       </article>
       <aside class="s3">Populaire smaken</aside>

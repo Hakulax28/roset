@@ -42,7 +42,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
 <body>
    <h1>Update de bestelling</h1><br>
-   <form action="bestel_update_verwerk.php?id=<?php echo $id; ?>" method="post">
+   <form action="bestel_update_verwerk.php?ID=<?php echo $id; ?>" method="post">
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>De besteller</p>
@@ -71,7 +71,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </div>
 
          <div class=" form-group">
-            <button type="submit" class="shadow-sm btn btn-info" name="submit">Update gebruiker!</button>
+            <button type="submit" class="shadow-sm btn btn-info" name="submit">Update Besteling!</button>
             <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
          </div><br>
 

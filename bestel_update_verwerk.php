@@ -12,7 +12,6 @@ if (isset($_POST["submit"])) {
       && !empty($_POST["ontvang"])
 
    ) {
-
       //allemaal moeten ze true zijn
       $user = $_POST['user'];
       $product = $_POST['product'];

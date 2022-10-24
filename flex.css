@@ -4,12 +4,14 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-gap: 10px;
+  border-radius: 25px;
 }
 .container * {
   background: rgb(255, 88, 158);
   display: flex;
   margin-bottom: 1px;
   margin-right: 1px;
+  border-radius: 25px;
 }
 header {
   grid-column-start: 4;

@@ -19,15 +19,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-gap: 50px;
+  grid-column-gap: 60px;
   border-style: solid;
   box-shadow: 0px 3px 5px;
+}
+header a {
+  width: 100px;
+  margin-top: 5px;
 }
 a:link,
 a:visited {
   background-color: rgb(255, 171, 210);
   color: black;
-  border: 2px solid rgb(88, 27, 84);
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -52,8 +55,8 @@ article img {
   margin-left: 95px;
   margin-top: 25px;
   border-radius: 75px;
-  border-color: bisque;
-  border-style: dotted;
+  border-color: rgb(255, 196, 124);
+  border-style: solid;
 }
 .bestel {
   justify-content: center;

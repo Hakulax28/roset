@@ -59,8 +59,23 @@
          </a>
       </header>
       <aside class="s2">Smaak van de dag</aside>
-      <article class="main">
-         <h1>Wil je bij ons werken? soliciteer nu!</h1>
+      <article class="formu">
+         <h3>Wil je bij ons werken? soliciteer nu!</h3>
+         <p></p>
+         <form action="" method="post">
+            <p>naam</p>
+            <input type="text" id="" placeholder="Vul je naam in" required>
+            <p>E-Mail</p>
+            <input type="email" id="" placeholder="Vul je email in" required>
+            <p>Geboortedatum</p>
+            <input type="date" id="" placeholder="Vul je geboortedatum in" required>
+            <p>Telefoonnummer</p>
+            <input type="tel" id="" placeholder="Vul je telefoonnummer in" required>
+            <p>Adres</p>
+            <input type="text" id="" placeholder="Vul je adres in" required>
+            <button></button>
+         </form>
+
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">

@@ -76,7 +76,8 @@ section {
   flex-wrap: wrap;
 }
 .bestel img {
-  margin-left: 90px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 150px;
   height: 150px;
 }

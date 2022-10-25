@@ -16,7 +16,7 @@
 
       <aside class="s1">
          <br>
-         <img src="img/logo.png" alt="" height="100px" width="100px">
+         <img src="img/logo.png" alt="">
          <h3>De Roset</h3>
       </aside>
       <header class="up">

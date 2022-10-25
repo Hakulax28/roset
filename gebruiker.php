@@ -57,7 +57,8 @@
          <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
       </aside>
       <article class="main">
-         <h1>Update uw gegevens</h1><br>
+         <h1>Uw gegevens</h1><br>
+         <p></p>
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>

@@ -53,7 +53,7 @@ article {
   text-align: center;
 }
 article img {
-  margin-top: 25px;
+  margin-top: 15px;
   border-radius: 75px;
   border-color: rgb(255, 196, 124);
   border-style: solid;
@@ -69,7 +69,7 @@ article img {
   flex-wrap: wrap;
 }
 .bestel img {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   width: 175px;
   height: 175px;

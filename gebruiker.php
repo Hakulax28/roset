@@ -58,7 +58,10 @@
             <p>Profiel</p>
          </a>
       </header>
-      <aside class="s2">Smaak van de dag</aside>
+      <aside class="s2">
+         <h5>Smaak van de dag</h5>
+         <p><img src="image/<?php echo $product["foto"] ?>.jpg"></p>
+      </aside>
       <article class="main">
          <h1>Update uw gegevens</h1><br>
       </article>

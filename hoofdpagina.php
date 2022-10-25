@@ -58,7 +58,10 @@
             <p>Profiel</p>
          </a>
       </header>
-      <aside class="s2">Smaak van de dag</aside>
+      <aside class="s2">
+         <h5>Smaak van de dag</h5>
+         <p><img src="image/<?php echo $product["foto"] ?>.jpg"></p>
+      </aside>
       <article class="main">
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!

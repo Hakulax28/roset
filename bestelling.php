@@ -27,7 +27,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 
       <aside class="s1">
          <br>
-         <img src="img/logo.png" alt="" height="100px" width="100px">
+         <img src="img/logo.png" alt="">
          <h3>De Roset</h3>
       </aside>
       <header class="up">
@@ -69,11 +69,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             </svg>
          </a>
       </header>
-      <aside class="s2">Smaak van de dag</aside>
+      <aside class="s2">
+         <h5>Smaak van de dag</h5>
+         <p><img src="image/<?php echo $product["foto"] ?>.jpg"></p>
+      </aside>
       <article class="bestel">
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
-            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="" width="150px" height="150px">
+            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="">
 
          <?php endforeach; ?><h3 style="text-align: center;">Bekijk de smaken!</h3>
          <br>

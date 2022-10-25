@@ -132,11 +132,12 @@ footer {
   margin-top: 5px;
   margin-right: 5px;
   border-style: solid;
+  text-align: center;
   box-shadow: 0px 3px 5px;
 }
 .s2 img {
-  height: 70px;
-  width: 70px;
+  height: 200px;
+  width: 200px;
 }
 .s3 {
   background: rgb(255, 88, 102);
@@ -144,16 +145,18 @@ footer {
   grid-column-end: 3;
   grid-row-start: 8;
   grid-row-end: 11;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 5px;
   margin-top: 5px;
   margin-right: 5px;
   border-style: solid;
+  text-align: center;
   box-shadow: 0px 3px 5px;
 }
-@media (min-width: 820px) and (max-width: 1440px) {
+.s3 img {
+  height: 90px;
+  width: 90px;
+}
+@media (min-width: 820px) and (max-width: 1430px) {
 }
 @media only screen and (min-width: 410px) and (max-width: 820px) {
 }

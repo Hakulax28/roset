@@ -73,6 +73,9 @@ article img {
   margin-bottom: 25px;
   text-align: center;
 }
+.blogs {
+  margin-left: 10px;
+}
 footer {
   background: rgb(255, 88, 158);
   grid-column-start: 1;

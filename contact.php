@@ -64,12 +64,13 @@
       </aside>
       <article class="main">
          <h3>Wil je bij ons werken? soliciteer nu!</h3>
+         <br>
          <article class="contact">
             <p>Naam:</p>
             <input type="text" id="" placeholder="Vul je naam in" required><br>
             <p>E-mail:</p>
             <input type="email" id="" placeholder="Vul je email in" required>
-            <p>GeboorteD:</p>
+            <p>Geboortedatum:</p>
             <input type="date" id="" placeholder="Vul je geboortedatum in" required>
             <p>Telefoon:</p>
             <input type="tel" id="" placeholder="Vul je telefoonnummer in" required>

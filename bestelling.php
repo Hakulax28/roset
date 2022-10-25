@@ -76,8 +76,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <article class="bestel">
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
-            <img src="image/<?php echo $product["foto"] ?>.jpg" alt="">
-
+            <a href="winkelwagen.php"><img src="image/<?php echo $product["foto"] ?>.jpg" alt=""></a>
          <?php endforeach; ?><h3 style="text-align: center;">Bekijk de smaken!</h3>
          <br>
 

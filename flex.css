@@ -53,11 +53,11 @@ article {
   text-align: center;
 }
 article img {
-  margin-left: 90px;
   margin-top: 25px;
   border-radius: 75px;
   border-color: rgb(255, 196, 124);
   border-style: solid;
+  box-shadow: 0px 2px 5px;
 }
 .main img {
   width: 370px;
@@ -76,6 +76,7 @@ section {
   flex-wrap: wrap;
 }
 .bestel img {
+  margin-left: 90px;
   width: 150px;
   height: 150px;
 }
@@ -112,8 +113,8 @@ footer {
   box-shadow: 0px 3px 5px;
 }
 .s1 img {
-  height: 105px;
-  width: 105px;
+  height: 125px;
+  width: 125px;
   margin-left: 80px;
 }
 .s2 {

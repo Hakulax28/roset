@@ -74,18 +74,21 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
       </aside>
       <article class="main">
-         <img src="img/ijssalon.jpg" alt="">
-         <section>
+         <section class="se1">
+            <img src="img/ijssalon.jpg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
          </section>
-         <img src="" alt="">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
+         <section class="se2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
+            <img src="" alt="">
+         </section>
+
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">

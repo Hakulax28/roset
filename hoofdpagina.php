@@ -81,19 +81,26 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
          </section>
-         <section class="se2">
+         <section class="se1">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-            <img src="" alt="">
+            <img src="img/schep.jpg" alt="">
          </section>
 
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">
-         <h3>Bestelingen</h3>
-         <p></p>
+         <section class="se2">
+            <h5>Ijssalon De Roset</h5>
+            <p>Castricum, Geesterduin 39</p>
+            <p>1902 EJ, 0251654683</p>
+         </section>
+         <section class="se2">
+            <h3>Bestelingen</h3>
+         </section>
+         <section class="se2"><a href="index.php">Ga hier terug</a></section>
       </footer>
    </div>
 

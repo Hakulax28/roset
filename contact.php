@@ -57,7 +57,7 @@
          <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
       </aside>
       <article class="main">
-         <h3>Wil je bij ons werken? soliciteer nu!</h3>
+         <h1>Wil je bij ons werken? soliciteer nu!</h1>
          <br>
          <article class="contact">
             <p>Naam:</p>

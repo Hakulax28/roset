@@ -67,8 +67,15 @@
       </article>
       <aside class="s3">Populaire smaken</aside>
       <footer class="under">
-         <h3>Bestelingen</h3>
-         <p></p>
+         <section class="se2">
+            <h5>Ijssalon De Roset</h5>
+            <p>Castricum, Geesterduin 39</p>
+            <p>1902 EJ, 0251654683</p>
+         </section>
+         <section class="se2">
+            <h3>Bestelingen</h3>
+         </section>
+         <section class="se2"><a href="index.php">Ga hier terug</a></section>
       </footer>
    </div>
 

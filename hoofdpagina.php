@@ -82,14 +82,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
             <img src="img/schep.jpg" alt="">
          </section>
-         <section class="se1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p>
-            <img src="img/schep.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-            </p>
-         </section>
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>

@@ -46,9 +46,9 @@ $sql = "SELECT * FROM product";
 $result = mysqli_query((new Database())->getConnection(), $sql);
 $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$id = $_GET["id"]; //17
+//$id = $_GET["id"]; //17
 
-$sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
+//$sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
 
 ?>
 

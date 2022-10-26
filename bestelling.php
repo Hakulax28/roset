@@ -70,12 +70,12 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <p><img src="image/<?php $sql = "SELECT * FROM product WHERE smaak_van_de_week=1"; ?>.jpg"></p>
       </aside>
       <article class="bestel">
+         <h1>Bekijk de smaken!</h1>
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
             <a href="winkelwagen.php"><img src="image/<?php echo $product["foto"] ?>.jpg" alt=""></a>
          <?php endforeach; ?>
-         <h3 style="text-align: center;">Bekijk de smaken!</h3>
-         <br>
+
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>

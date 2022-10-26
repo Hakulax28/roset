@@ -68,6 +68,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
       </aside>
       <article class="main">
+         <h1>Welkom bij de Ijssalon van De Roset</h1>
          <section class="se1">
             <img src="img/ijssalon.jpg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!

@@ -89,15 +89,25 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <article class="main">
          <h1>Uw gegevens</h1><br>
          <!--<td><?php echo $user["id"] ?></td>-->
+         <h3>Voornaam</h3>
          <p><?php echo $user["voornaam"] ?></p>
+         <h3>Achternaam</h3>
          <p><?php echo $user["achternaam"] ?></p>
+         <h3>E-mail</h3>
          <p><?php echo $user["email"] ?></p>
+         <h3>Wachtwoord</h3>
          <p><?php echo $user["wachtwoord"] ?></p>
+         <h3>Geboortedatum</h3>
          <p><?php echo $user["geboortedatum"] ?></p>
+         <h3>Telefoonnummer</h3>
          <p><?php echo $user["telefoon"] ?></p>
+         <h3>Adres</h3>
          <p><?php echo $user["adres"] ?></p>
+         <h3>Postcode</h3>
          <p><?php echo $user["postcode"] ?></p>
+         <h3>Stad</h3>
          <p><?php echo $user["stad"] ?></p>
+         <h3>Wat ben ik</h3>
          <p><?php echo $user["rol"] ?></p>
       </article>
       <aside class="s3">

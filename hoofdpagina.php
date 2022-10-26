@@ -63,7 +63,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </header>
       <aside class="s2">
          <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg" alt="SVDW"></p><br>
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
@@ -84,7 +84,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </section>
       </article>
       <aside class="s3">
-         <h3>Populaire smaken</h3>
+         <h1>Populaire smaken</h1>
          <br>
          <img src="image/blauw_maan.jpg" alt="" srcset="">
          <img src="image/vanille.jpg" alt="" srcset="">

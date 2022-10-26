@@ -82,7 +82,7 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
 
       </article>
       <aside class="s3">
-         <h3>Populaire smaken</h3>
+         <h1>Populaire smaken</h1>
          <br>
          <img src="image/blauw_maan.jpg" alt="" srcset="">
          <img src="image/vanille.jpg" alt="" srcset="">

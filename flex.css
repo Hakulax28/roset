@@ -78,14 +78,14 @@ article img {
   height: 165px;
 }
 .contact {
-  grid-column-start: 4;
-  grid-column-end: 12;
+  grid-column-start: 5;
+  grid-column-end: 11;
   margin-bottom: 25px;
   text-align: center;
 }
 .blogs {
-  grid-column-start: 4;
-  grid-column-end: 12;
+  grid-column-start: 5;
+  grid-column-end: 11;
 }
 footer {
   background: rgb(255, 88, 158);

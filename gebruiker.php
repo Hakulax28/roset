@@ -50,7 +50,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <h3>De Roset</h3>
       </aside>
       <header class="up">
-      <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
+         <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
             </svg>
@@ -84,7 +84,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </header>
       <aside class="s2">
          <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg" alt="SVDW"></p><br>
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
@@ -113,7 +113,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </section>
       </article>
       <aside class="s3">
-         <h3>Populaire smaken</h3>
+         <h1>Populaire smaken</h1>
          <br>
          <img src="image/blauw_maan.jpg" alt="" srcset="">
          <img src="image/vanille.jpg" alt="" srcset="">

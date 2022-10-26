@@ -99,7 +99,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </aside>
       <footer class="under">
          <section class="se2">
-            <h5>Ijssalon De Roset</h5>
+            <h3>Ijssalon De Roset</h3>
             <p>Castricum, Geesterduin 39</p>
             <p>1902 EJ, 0251654683</p>
          </section>

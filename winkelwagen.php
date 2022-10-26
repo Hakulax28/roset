@@ -34,6 +34,7 @@ if (isset($_POST["submit"])) {
    }
 }
 
+$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
 
 // hier moet de info van alle producten erop komen. 
 
@@ -44,17 +45,11 @@ $all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $sql = "SELECT * FROM product";
 $result = mysqli_query((new Database())->getConnection(), $sql);
 $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-?>
 
-<?php
 $id = $_GET["id"]; //17
 
 $sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
 
-if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-
-   $product = mysqli_fetch_assoc($result);
-}
 ?>
 
 <!DOCTYPE html>
@@ -163,7 +158,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </aside>
       <footer class="under">
          <section class="se2">
-            <h5>Ijssalon De Roset</h5>
+            <h3>Ijssalon De Roset</h3>
             <p>Castricum, Geesterduin 39</p>
             <p>1902 EJ, 0251654683</p>
          </section>

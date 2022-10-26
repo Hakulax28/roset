@@ -9,6 +9,8 @@ $sql = "SELECT * FROM product ORDER BY naam ASC, naam DESC";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
+$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
+
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +71,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <h3>Smaak van de dag</h3>
          <p><img src="image/<?php $sql = "SELECT * FROM product WHERE smaak_van_de_week=1"; ?>.jpg"></p>
       </aside>
-      <article class="bestel">
+      <article class="bestel" id="bestelling">
          <h1>Bekijk de smaken!</h1>
          <?php foreach ($products as $product) : ?>
             <!--<td><?php echo $product["id"] ?></td>-->
@@ -86,7 +88,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </aside>
       <footer class="under">
          <section class="se2">
-            <h5>Ijssalon De Roset</h5>
+            <h3>Ijssalon De Roset</h3>
             <p>Castricum, Geesterduin 39</p>
             <p>1902 EJ, 0251654683</p>
          </section>

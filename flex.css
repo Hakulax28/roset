@@ -27,6 +27,10 @@ header a {
   width: 100px;
   margin-top: 5px;
 }
+.up svg {
+  width: 24px;
+  height: 24px;
+}
 a:link,
 a:visited {
   background-color: rgb(255, 171, 210);
@@ -74,14 +78,14 @@ article img {
   height: 165px;
 }
 .contact {
-  width: 1475px;
-  margin-left: 15px;
+  grid-column-start: 4;
+  grid-column-end: 12;
   margin-bottom: 25px;
   text-align: center;
 }
 .blogs {
-  width: 1475px;
-  margin-left: 15px;
+  grid-column-start: 4;
+  grid-column-end: 12;
 }
 footer {
   background: rgb(255, 88, 158);

@@ -69,8 +69,9 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
          </a>
       </header>
       <aside class="s2">
-         <h3>Smaak van de dag</h3>
-         <p><img src="image/<?php $sql = "SELECT * FROM product WHERE smaak_van_de_week=1"; ?>.jpg"></p>
+         <h1>Smaak van de dag</h1>
+         <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <a href="winkelwagen.php" style="box-shadow: 0px 5px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="bestel" id="bestelling">
          <h1>Bekijk de smaken!</h1>

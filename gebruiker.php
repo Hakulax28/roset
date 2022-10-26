@@ -83,8 +83,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h3>Smaak van de dag</h3>
-         <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
+         <h1>Smaak van de dag</h1>
+         <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <a href="winkelwagen.php" style="box-shadow: 0px 5px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
          <h1>Uw gegevens</h1><br>

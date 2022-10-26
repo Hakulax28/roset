@@ -7,6 +7,51 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
+
+if (isset($_POST["submit"])) {
+
+   if (
+      !empty($_POST["voornaam"])
+      || !empty($_POST["achternaam"])
+      && !empty($_POST["email"])
+      && !empty($_POST["wachtwoord"])
+      && !empty($_POST["geboortedatum"])
+      && !empty($_POST["telefoon"])
+      && !empty($_POST["adres"])
+      && !empty($_POST["postcode"])
+      && !empty($_POST["stad"])
+      && !empty($_POST["rol"])
+
+   ) {
+      // als op registreer wordt gedrukt 
+      if (isset($_POST['submit'])) {
+
+
+         $voornaam = $_POST['voornaam'];
+         $achternaam = $_POST['achternaam'];
+         $email = trim($_POST["email"]);
+         $wachtwoord = $_POST['wachtwoord'];
+         $geboortedatum = $_POST['geboortedatum'];
+         $telefoon = $_POST['telefoon'];
+         $adres = $_POST['adres'];
+         $postcode = $_POST['postcode'];
+         $stad = $_POST['stad'];
+         $rol = $_POST['rol'];
+
+         //database connectie
+
+         require 'classes/database.php';
+         $sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, stad, rol)
+                VALUES ('$voornaam', '$achternaam', '$email', '$wachtwoord', '$geboortedatum', '$telefoon', '$adres', '$postcode','$stad', '$rol')";
+
+         // Voer de INSERT INTO STATEMENT uit
+         if (mysqli_query((new Database())->getConnection(), $sql)) {
+            header("location: user_overzicht.php");
+         }
+         mysqli_close($conn); // Sluit de database verbinding
+      }
+   }
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,24 +109,43 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h3>Smaak van de dag</h3>
-         <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
+         <h1>Smaak van de dag</h1>
+         <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <a href="winkelwagen.php" style="box-shadow: 0px 5px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
          <h1>Wil je bij ons werken? soliciteer nu!</h1>
          <br>
          <article class="contact">
-            <p>Naam:</p>
-            <input type="text" id="" placeholder="Vul je naam in" required><br>
-            <p>E-mail:</p>
-            <input type="email" id="" placeholder="Vul je email in" required>
-            <p>Geboortedatum:</p>
-            <input type="date" id="" placeholder="Vul je geboortedatum in" required>
-            <p>Telefoon:</p>
-            <input type="tel" id="" placeholder="Vul je telefoonnummer in" required>
-            <p>Adres:</p>
-            <input type="text" id="" placeholder="Vul je adres in" required><br><br>
-            <button>Stuur uw applicatie in</button>
+            <form action="contact.php" method="post">
+               <div>
+                  <div>
+                     <p>Voornaam</p>
+                     <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
+                     <p>Achternaam</p>
+                     <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
+                     <p>E-Mail</p>
+                     <input type="email" name="email" id="" placeholder="Vul je email in" required>
+                     <p>Wachtwoord</p>
+                     <input type="password" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
+                     <p>Geboortedatum</p>
+                     <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
+                     <p>Telefoonnummer</p>
+                     <input type="tel" name="telefoon" id="" placeholder="Vul je telefoonnummer in" required>
+                     <p>Adres</p>
+                     <input type="text" name="adres" id="" placeholder="Vul je adres in" required>
+                     <p>Postcode</p>
+                     <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
+                     <p>Stad</p>
+                     <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
+                  </div>
+               </div>
+               <br>
+               <div>
+                  <button type="submit" name="submit">Stuur je applicatie in</button>
+                  <a href="user_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+               </div><br>
+            </form>
          </article>
       </article>
       <aside class="s3">

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once 'classes/database.php';
 
@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
 
       // Voer de INSERT INTO STATEMENT uit
       if (mysqli_query((new Database())->getConnection(), $sql)) {
-       header("location: hoofdpagina.php");
+         header("location: hoofdpagina.php");
          exit;
       }
       die("");
@@ -46,6 +46,16 @@ $result = mysqli_query((new Database())->getConnection(), $sql);
 $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
+<?php
+$id = $_GET["id"]; //17
+
+$sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+
+   $product = mysqli_fetch_assoc($result);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,7 +117,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </aside>
       <article class="main">
          <section>
-           
+
             <!-- einde php -->
             <form action="winkelwagen.php" method="post">
                <div>
@@ -121,8 +131,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                      </select><br>
                      <p>De product</p>
                      <select name="product">
-                        <?php
-                        foreach ($all_products as $use) : ?>
+                        <?php foreach ($all_products as $use) : ?>
                            <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
                         <?php endforeach ?>
                      </select><br>
@@ -148,9 +157,9 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <aside class="s3">
          <h3>Populaire smaken</h3>
          <br>
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
+         <img src="image/blauw_maan.jpg" alt="" srcset="">
+         <img src="image/vanille.jpg" alt="" srcset="">
+         <img src="image/koekdeeg.jpg" alt="" srcset="">
       </aside>
       <footer class="under">
          <section class="se2">

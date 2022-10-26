@@ -98,9 +98,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <aside class="s3">
          <h3>Populaire smaken</h3>
          <br>
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
+         <img src="image/blauw_maan.jpg" alt="" srcset="">
+         <img src="image/vanille.jpg" alt="" srcset="">
+         <img src="image/koekdeeg.jpg" alt="" srcset="">
       </aside>
       <footer class="under">
          <section class="se2">

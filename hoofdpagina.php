@@ -22,9 +22,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 </head>
 
 <body>
-
    <div class="container">
-
       <aside class="s1">
          <br>
          <img src="img/logo.png" alt="">
@@ -90,16 +88,14 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
             </p>
-
          </section>
-
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>
          <br>
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
-         <img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg" alt="" srcset="">
+         <img src="image/blauw_maan.jpg" alt="" srcset="">
+         <img src="image/vanille.jpg" alt="" srcset="">
+         <img src="image/koekdeeg.jpg" alt="" srcset="">
       </aside>
       <footer class="under">
          <section class="se2">

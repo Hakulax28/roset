@@ -13,7 +13,7 @@
 <body>
    <h1>Registreer je nu in</h1><br>
 
-   <form action="user_registreer_verwerk.php" method="post">
+   <form action="inloggen.php" method="post">
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Voornaam</p>
@@ -43,7 +43,7 @@
       <br>
       <div class=" form-group">
          <button type="submit" class="shadow-sm btn btn-info" name="submit">Registreer gebruiker!</button>
-         <a href="user_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+         <a href="inloggen.php" class="shadow-sm btn btn-danger">Annuleer</a>
       </div><br>
    </form>
 </body>

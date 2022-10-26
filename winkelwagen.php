@@ -78,7 +78,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </aside>
       <article class="main">
          <section>
-            <form action="hoofdpagina.php" method="post">
+            <form action="winkelwagen.php" method="post">
                <div>
                   <div>
                      <p>De besteller</p>

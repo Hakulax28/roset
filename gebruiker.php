@@ -1,3 +1,33 @@
+<?php require 'classes/database.php';
+
+// hier moet de info van de anderen tabelen te voor schijn komen. 
+
+$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+
+session_start();
+
+$id = $_GET["id"]; //17
+
+$sql = "SELECT * FROM user WHERE id = $id LIMIT 1";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+
+   $user = mysqli_fetch_assoc($result);
+
+   //var_dump($user);
+
+   if (is_null($user)) {
+      header("location: user_overzicht.php");
+   }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +88,17 @@
       </aside>
       <article class="main">
          <h1>Uw gegevens</h1><br>
-         <p></p>
+         <!--<td><?php echo $user["id"] ?></td>-->
+         <p><?php echo $user["voornaam"] ?></p>
+         <p><?php echo $user["achternaam"] ?></p>
+         <p><?php echo $user["email"] ?></p>
+         <p><?php echo $user["wachtwoord"] ?></p>
+         <p><?php echo $user["geboortedatum"] ?></p>
+         <p><?php echo $user["telefoon"] ?></p>
+         <p><?php echo $user["adres"] ?></p>
+         <p><?php echo $user["postcode"] ?></p>
+         <p><?php echo $user["stad"] ?></p>
+         <p><?php echo $user["rol"] ?></p>
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>

@@ -1,3 +1,15 @@
+<?php require 'classes/database.php';
+
+// hier moet de info van alle producten erop komen. 
+
+$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

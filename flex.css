@@ -75,12 +75,14 @@ article img {
   height: 165px;
 }
 .contact {
-  margin-left: 10px;
+  width: 1475px;
+  margin-left: 15px;
   margin-bottom: 25px;
   text-align: center;
 }
 .blogs {
-  margin-left: 10px;
+  width: 1475px;
+  margin-left: 15px;
 }
 footer {
   background: rgb(255, 88, 158);

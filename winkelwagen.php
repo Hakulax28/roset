@@ -7,6 +7,14 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
+
+$sql = "SELECT * FROM user";
+$result = mysqli_query((new Database())->getConnection(), $sql);
+$all_users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT * FROM product";
+$result = mysqli_query((new Database())->getConnection(), $sql);
+$all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 
@@ -69,7 +77,42 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <p><img src="image/<?php echo $product["foto"] + $product["smaak_van_de_week"] ?>.jpg"></p>
       </aside>
       <article class="main">
-         <section></section>
+         <section>
+            <form action="hoofdpagina.php" method="post">
+               <div>
+                  <div>
+                     <p>De besteller</p>
+                     <select name="user">
+                        <?php
+                        foreach ($all_users as $use) : ?>
+                           <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
+                        <?php endforeach ?>
+                     </select><br>
+                     <p>De product</p>
+                     <select name="product">
+                        <?php
+                        foreach ($all_products as $use) : ?>
+                           <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
+                        <?php endforeach ?>
+                     </select><br>
+                  </div>
+                  <div class="col-md-3 mx-auto">
+                     <p>Opgepakt</p>
+                     <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
+                     <p>Bezorgd</p>
+                     <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
+                  </div>
+               </div>
+               <div class="col-md-3 mx-auto">
+                  <p>Ontvangen</p>
+                  <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
+               </div><br>
+               <div class=" form-group">
+                  <button type="submit" class="shadow-sm btn btn-info" name="submit">Bestel jouw ijsje!</button>
+                  <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
+               </div><br>
+            </form>
+         </section>
       </article>
       <aside class="s3">
          <h3>Populaire smaken</h3>

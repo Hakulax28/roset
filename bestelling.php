@@ -2,15 +2,15 @@
 
 // hier moet de info van alle producten erop komen. 
 
+$sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $foto = mysqli_fetch_assoc($result);
+}
+
 $sql = "SELECT * FROM product ORDER BY naam ASC, naam DESC";
-
-//$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
-
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
-$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
-
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
          <h3>De Roset</h3>
       </aside>
       <header class="up">
-      <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
+         <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
             </svg>
@@ -70,7 +70,7 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
       </header>
       <aside class="s2">
          <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg"></p><br>
+         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="bestel" id="bestelling">
@@ -90,12 +90,12 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
       </aside>
       <footer class="under">
          <section class="se2">
-            <h3>Ijssalon De Roset</h3>
+            <h1>Ijssalon De Roset</h1>
             <p>Castricum, Geesterduin 39</p>
             <p>1902 EJ, 0251654683</p>
          </section>
          <section class="se2">
-            <h3>Bestelingen</h3>
+            <h1>Bestelingen</h1>
          </section>
          <section class="se2"><a href="index.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">

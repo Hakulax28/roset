@@ -2,10 +2,10 @@
 
 // hier moet de info van alle producten erop komen. 
 
-$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
+$sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   $foto = mysqli_fetch_assoc($result);
 }
 
 if (isset($_POST["submit"])) {
@@ -110,7 +110,7 @@ if (isset($_POST["submit"])) {
       </header>
       <aside class="s2">
          <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg" alt="SVDW"></p><br>
+         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">

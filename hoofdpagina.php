@@ -2,10 +2,10 @@
 
 // hier moet de info van alle producten erop komen. 
 
-$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
+$sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   $foto = mysqli_fetch_assoc($result);
 }
 ?>
 
@@ -63,7 +63,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </header>
       <aside class="s2">
          <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $product["foto"], $product["smaak_van_de_week"] ?>.jpg" alt="SVDW"></p><br>
+         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
@@ -92,12 +92,12 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </aside>
       <footer class="under">
          <section class="se2">
-            <h3>Ijssalon De Roset</h3>
+            <h1>Ijssalon De Roset</h1>
             <p>Castricum, Geesterduin 39</p>
             <p>1902 EJ, 0251654683</p>
          </section>
          <section class="se2">
-            <h3>Bestelingen</h3>
+            <h1>Bestelingen</h1>
          </section>
          <section class="se2"><a href="index.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">

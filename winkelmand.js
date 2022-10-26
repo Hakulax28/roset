@@ -2,18 +2,18 @@
 /**
     Link JS met HTML elementen
 */
-const VOEG_NOTITIES_TOE_KNOP = document.getElementById("voegNotitieToeKnop");
-const NOTITIE_LIJST = document.getElementById("notitieLijst");
+const VOEG_NOTITIES_TOE_KNOP = document.getElementById("voegBestelingToeKnop");
+const NOTITIE_LIJST = document.getElementById("BestelingLijst");
 
-const DIALOOG = document.getElementById("bestelling");
-const SLUIT_DIALOOG_KNOP = document.getElementById("sluitDialoogKnop");
+const DIALOOG = document.getElementById("winkelmand");
+const SLUIT_DIALOOG_KNOP = document.getElementById("sluitWinkelmandKnop");
 
-const NOTITIE_TITEL = document.getElementById("notitieTitel");
-const NOTITIE_CONTENT = document.getElementById("notitieContent");
-const NOTITIE_OPSLAAN_KNOP = document.getElementById("notitieOpslaanKnop");
+const NOTITIE_TITEL = document.getElementById("BestelingTitel");
+const NOTITIE_CONTENT = document.getElementById("BestelingContent");
+const NOTITIE_OPSLAAN_KNOP = document.getElementById("BestelingOpslaanKnop");
 
-const NOTITIE_WEERGAVE_TITEL = document.getElementById("notitieWeergaveTitel");
-const NOTITIE_WEERGAVE_CONTENT = document.getElementById("notitieWeergaveContent");
+const NOTITIE_WEERGAVE_TITEL = document.getElementById("BestelingWeergaveTitel");
+const NOTITIE_WEERGAVE_CONTENT = document.getElementById("BestelingWeergaveContent");
 
 // Maak dialoog input velden leeg.
 function leegInputVelden() {

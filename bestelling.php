@@ -22,6 +22,7 @@ $sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="flex.css">
+   <script src="winkelmand.js"></script>
    <title>De Roset</title>
 </head>
 

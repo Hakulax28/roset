@@ -1,12 +1,41 @@
-<?php require 'classes/database.php';
+<?php 
+
+require_once 'classes/database.php';
+
+if (isset($_POST["submit"])) {
+
+   if (
+      !empty($_POST["user"])
+      && !empty($_POST["product"])
+      && !empty($_POST["oppak"])
+      && !empty($_POST["bezorg"])
+      && !empty($_POST["ontvang"])
+
+   ) {
+      // als op registreer wordt gedrukt 
+
+      $user = $_POST['user'];
+      $product = $_POST['product'];
+      $oppak = $_POST["oppak"];
+      $bezorg = $_POST['bezorg'];
+      $ontvang = $_POST['ontvang'];
+
+      //database connectie
+
+      $sql = "INSERT INTO orders (gebr_id, product_id, oppak, bezorg, ontvang) 
+                VALUES ('$user', '$product', '$oppak', '$bezorg', '$ontvang')";
+
+      // Voer de INSERT INTO STATEMENT uit
+      if (mysqli_query((new Database())->getConnection(), $sql)) {
+       header("location: hoofdpagina.php");
+         exit;
+      }
+      die("");
+   }
+}
+
 
 // hier moet de info van alle producten erop komen. 
-
-$sql = "SELECT * FROM product WHERE smaak_van_de_week=1";
-
-if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
-   $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-}
 
 $sql = "SELECT * FROM user";
 $result = mysqli_query((new Database())->getConnection(), $sql);
@@ -78,41 +107,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </aside>
       <article class="main">
          <section>
-            <?php
-            if (isset($_POST["submit"])) {
-
-               if (
-                  !empty($_POST["user"])
-                  && !empty($_POST["product"])
-                  && !empty($_POST["oppak"])
-                  && !empty($_POST["bezorg"])
-                  && !empty($_POST["ontvang"])
-
-               ) {
-                  // als op registreer wordt gedrukt 
-                  if (isset($_POST['submit'])) {
-
-                     $user = $_POST['user'];
-                     $product = $_POST['product'];
-                     $oppak = $_POST["oppak"];
-                     $bezorg = $_POST['bezorg'];
-                     $ontvang = $_POST['ontvang'];
-
-                     //database connectie
-
-                     require 'classes/database.php';
-                     $sql = "INSERT INTO orders (gebr_id, product_id, oppak, bezorg, ontvang) 
-                            VALUES ('$user', '$product', '$oppak', '$bezorg', '$ontvang')";
-
-                     // Voer de INSERT INTO STATEMENT uit
-                     if (mysqli_query((new Database())->getConnection(), $sql)) {
-                        header("location: bestel_overzicht.php");
-                     }
-                     mysqli_close($conn); // Sluit de database verbinding
-                  }
-               }
-            }
-            ?>
+           
             <!-- einde php -->
             <form action="winkelwagen.php" method="post">
                <div>
@@ -144,7 +139,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
                </div><br>
                <div class=" form-group">
-                  <button type="submit" class="shadow-sm btn btn-info" name="submit">Bestel jouw ijsje!</button>
+                  <button type="submit" name="submit">Bestel jouw ijsje!</button>
                   <a href="bestel_overzicht.php" class="shadow-sm btn btn-danger">Annuleer</a>
                </div><br>
             </form>

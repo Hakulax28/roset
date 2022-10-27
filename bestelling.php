@@ -72,14 +72,18 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <aside class="s2">
          <h1>Smaak van de dag</h1>
          <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
-         <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
+         <a href="winkelwagen.php?id=1" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="bestel" id="bestelling">
          <h1>Bekijk de smaken!</h1>
          <section>
             <?php foreach ($products as $product) : ?>
                <!--<td><?php echo $product["id"] ?></td>-->
-               <a href="winkelwagen.php?id=<?php echo $product["id"] ?>"><img src="image/<?php echo $product["foto"] ?>.jpg" alt=""></a>
+               <a href="winkelwagen.php?id=<?php echo $product["id"] ?>"><img src="image/<?php echo $product["foto"] ?>.jpg" alt="">
+                  <div>
+                     <?php echo $product["naam"] ?>
+                  </div>
+               </a>
             <?php endforeach; ?>
          </section>
       </article>

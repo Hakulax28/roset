@@ -91,25 +91,25 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <article class="main">
          <h1>Uw gegevens</h1><br>
          <section class="se1">
-            <h3>Naam</h3>
+            <h2>Naam</h2>
             <p><?php echo $user["voornaam"] ?> <?php echo $user["achternaam"] ?></p>
-            <h3>E-mail</h3>
+            <h2>E-mail</h2>
             <p><?php echo $user["email"] ?></p>
-            <h3>Wachtwoord</h3>
+            <h2>Wachtwoord</h2>
             <p><?php echo $user["wachtwoord"] ?></p>
-            <h3>Geboortedatum</h3>
+            <h2>Geboortedatum</h2>
             <p><?php echo $user["geboortedatum"] ?></p>
-            <h3>Telefoonnummer</h3>
+            <h2>Telefoonnummer</h2>
             <p><?php echo $user["telefoon"] ?></p>
          </section>
          <section class="se1">
-            <h3>Adres</h3>
+            <h2>Adres</h2>
             <p><?php echo $user["adres"] ?></p>
-            <h3>Postcode</h3>
+            <h2>Postcode</h2>
             <p><?php echo $user["postcode"] ?></p>
-            <h3>Stad</h3>
+            <h2>Stad</h2>
             <p><?php echo $user["stad"] ?></p>
-            <h3>Wat ben ik</h3>
+            <h2>Wat ben ik</h2>
             <p>een <?php echo $user["rol"] ?></p><br>
             <a href="user_update.php?id=2" style="box-shadow: 0px 1px 5px; border-style:solid;">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">

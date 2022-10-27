@@ -121,29 +121,31 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <form action="winkelwagen.php" method="post">
                <div>
                   <div>
-                     <p>De besteller</p>
+                     <h2>De besteller</h2>
                      <select name="user">
                         <?php
                         foreach ($all_users as $use) : ?>
                            <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
                         <?php endforeach ?>
                      </select><br>
-                     <p>De product</p>
+                     <h2>De product</h2>
                      <select name="product">
                         <?php foreach ($all_products as $use) : ?>
                            <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
                         <?php endforeach ?>
                      </select><br>
+                     <h2>Waar wil je het bezorgd?</h2>
+                     <input type="text" name="" id="" class="form-control"><br>
                   </div>
                   <div class="col-md-3 mx-auto">
-                     <p>Opgepakt</p>
+                     <h2>Opgepakt</h2>
                      <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
-                     <p>Bezorgd</p>
+                     <h2>Bezorgd</h2>
                      <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
                   </div>
                </div>
                <div class="col-md-3 mx-auto">
-                  <p>Ontvangen</p>
+                  <h2>Ontvangen</h2>
                   <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
                </div><br>
                <div class=" form-group">

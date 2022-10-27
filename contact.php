@@ -77,6 +77,7 @@ if (isset($_POST["submit"])) {
          <h3>De Roset</h3>
       </aside>
       <header class="up">
+
          <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
@@ -117,27 +118,27 @@ if (isset($_POST["submit"])) {
       <article class="main">
          <h1>Wil je bij ons werken? Solliciteer nu!</h1>
          <br>
-         <article class="contact">
+         <section class="contact">
             <form action="contact.php" method="post">
                <div>
                   <div>
-                     <p>Voornaam</p>
+                     <h2>Voornaam</h2>
                      <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
-                     <p>Achternaam</p>
+                     <h2>Achternaam</h2>
                      <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
-                     <p>E-Mail</p>
+                     <h2>E-Mail</h2>
                      <input type="email" name="email" id="" placeholder="Vul je email in" required>
-                     <p>Wachtwoord</p>
+                     <h2>Wachtwoord</h2>
                      <input type="password" name="wachtwoord" id="" placeholder="Vul je wachtwoord in" required>
-                     <p>Geboortedatum</p>
+                     <h2>Geboortedatum</h2>
                      <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
-                     <p>Telefoonnummer</p>
+                     <h2>Telefoonnummer</h2>
                      <input type="tel" name="telefoon" id="" placeholder="Vul je telefoonnummer in" required>
-                     <p>Adres</p>
+                     <h2>Adres</h2>
                      <input type="text" name="adres" id="" placeholder="Vul je adres in" required>
-                     <p>Postcode</p>
+                     <h2>Postcode</h2>
                      <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
-                     <p>Stad</p>
+                     <h2>Stad</h2>
                      <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
                   </div>
                </div>
@@ -150,7 +151,7 @@ if (isset($_POST["submit"])) {
                      Stuur je applicatie in</a>
                </div><br>
             </form>
-         </article>
+         </section>
       </article>
       <aside class="s3">
          <h1>Populaire smaken</h1>

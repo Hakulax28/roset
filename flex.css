@@ -58,7 +58,6 @@ article {
 article img {
   margin-top: 10px;
   border-radius: 75px;
-  border-color: rgb(255, 196, 124);
   border-style: solid;
   box-shadow: 0px 2px 5px;
 }
@@ -71,10 +70,15 @@ article img {
   flex-wrap: wrap;
 }
 .bestel img {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 165px;
-  height: 165px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 3px 5px;
+  margin-bottom: 25px;
+}
+
+.bestel.div {
+  text-align: center;
+  padding: 10px 20px;
 }
 .contact {
   grid-column-start: 5;
@@ -124,9 +128,9 @@ footer {
   box-shadow: 0px 3px 5px;
 }
 .s1 img {
+  margin-left: 80px;
   height: 125px;
   width: 125px;
-  margin-left: 80px;
 }
 .s2 {
   background: rgb(255, 149, 130);
@@ -142,8 +146,10 @@ footer {
   box-shadow: 0px 3px 5px;
 }
 .s2 img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  border-style: solid;
+  box-shadow: 0px 3px 5px;
 }
 .s3 {
   background: rgb(255, 88, 102);
@@ -159,8 +165,10 @@ footer {
   box-shadow: 0px 3px 5px;
 }
 .s3 img {
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
+  border-style: solid;
+  box-shadow: 0px 3px 5px;
 }
 @media (min-width: 820px) and (max-width: 1430px) {
 }

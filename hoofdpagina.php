@@ -7,6 +7,17 @@ $sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $foto = mysqli_fetch_assoc($result);
 }
+
+$sql = "SELECT * FROM orders WHERE gebr_id = 2";
+
+$sql = "SELECT *, user.achternaam as gebr_id, product.naam as product_id 
+FROM orders
+JOIN user ON user.id = orders.gebr_id
+JOIN product ON product.id = orders.product_id ";
+
+if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
+   $order = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +74,10 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
-         <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
+         <h1>Smaak van de dag</h1><br>
+         <a href="winkelwagen.php?id=1"><img src="image/<?php echo $foto["foto"] ?>.jpg" alt="">
+            <div>Bestel de smaak nu!</div>
+         </a>
       </aside>
       <article class="main">
          <h1>Welkom bij de Ijssalon van De Roset</h1>
@@ -98,7 +110,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <p>1902 EJ, 0251654683</p>
          </section>
          <section class="se2">
-            <h1>Bestelingen</h1>
+            <h1>Bezorging</h1>
+            <!--<p><?php echo $order["gebr_id"] ?> <?php echo $order["product_id"] ?> om <?php echo $order["bezorg"] ?></p>-->
          </section>
          <section class="se2"><a href="index.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">

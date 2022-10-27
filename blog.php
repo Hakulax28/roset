@@ -65,35 +65,42 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
-         <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
+         <h1>Smaak van de dag</h1><br>
+         <a href="winkelwagen.php?id=1"><img src="image/<?php echo $foto["foto"] ?>.jpg" alt="">
+            <div>Bestel de smaak nu!</div>
+         </a>
       </aside>
-      <article class="main">
+      <article class="blog">
          <h1>Blog</h1>
          <br>
          <article class="blogs">
             <h2>T</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p><br>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            </p><br>
          </article>
          <br>
          <article class="blogs">
             <h2>T</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p><br>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            </p><br>
          </article>
          <br>
          <article class="blogs">
             <h2>T</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!</p><br>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
+            </p><br>
          </article>
          <br>
       </article>

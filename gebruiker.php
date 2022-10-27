@@ -84,33 +84,26 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
-         <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
+         <h1>Smaak van de dag</h1><br>
+         <a href="winkelwagen.php?id=1"><img src="image/<?php echo $foto["foto"] ?>.jpg" alt="">
+            <div>Bestel de smaak nu!</div>
+         </a>
       </aside>
       <article class="main">
          <h1>Uw gegevens</h1><br>
-         <section class="se1">
+         <section>
             <h2>Naam</h2>
             <p><?php echo $user["voornaam"] ?> <?php echo $user["achternaam"] ?></p>
             <h2>E-mail</h2>
             <p><?php echo $user["email"] ?></p>
-            <h2>Wachtwoord</h2>
-            <p><?php echo $user["wachtwoord"] ?></p>
             <h2>Geboortedatum</h2>
             <p><?php echo $user["geboortedatum"] ?></p>
             <h2>Telefoonnummer</h2>
             <p><?php echo $user["telefoon"] ?></p>
-         </section>
-         <section class="se1">
             <h2>Adres</h2>
-            <p><?php echo $user["adres"] ?></p>
-            <h2>Postcode</h2>
-            <p><?php echo $user["postcode"] ?></p>
-            <h2>Stad</h2>
-            <p><?php echo $user["stad"] ?></p>
+            <p><?php echo $user["adres"] ?> <?php echo $user["postcode"] ?> <?php echo $user["stad"] ?></p>
             <h2>Wat ben ik</h2>
-            <p>een <?php echo $user["rol"] ?></p><br>
+            <p>Een <?php echo $user["rol"] ?></p><br>
             <a href="user_update.php?id=2" style="box-shadow: 0px 1px 5px; border-style:solid;">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                   <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />

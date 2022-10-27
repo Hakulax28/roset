@@ -70,12 +70,13 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </header>
       <aside class="s2">
-         <h1>Smaak van de dag</h1>
-         <p><img src="image/<?php echo $foto["foto"] ?>.jpg" alt=""></p><br>
-         <a href="winkelwagen.php?id=1" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
+         <h1>Smaak van de dag</h1><br>
+         <a href="winkelwagen.php?id=1"><img src="image/<?php echo $foto["foto"] ?>.jpg" alt="">
+            <div>Bestel de smaak nu!</div>
+         </a>
       </aside>
       <article class="bestel" id="bestelling">
-         <h1>Bekijk de smaken!</h1>
+         <h1>Bekijk de smaken!</h1><br>
          <section>
             <?php foreach ($products as $product) : ?>
                <!--<td><?php echo $product["id"] ?></td>-->

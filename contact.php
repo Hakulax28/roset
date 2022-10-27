@@ -115,7 +115,7 @@ if (isset($_POST["submit"])) {
          <a href="winkelwagen.php" style="box-shadow: 0px 1px 5px; border-style:solid;">Bestel de smaak nu!</a>
       </aside>
       <article class="main">
-         <h1>Wil je bij ons werken? soliciteer nu!</h1>
+         <h1>Wil je bij ons werken? Solliciteer nu!</h1>
          <br>
          <article class="contact">
             <form action="contact.php" method="post">

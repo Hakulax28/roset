@@ -24,12 +24,11 @@ if (!is_null($result)) {
         //$_SESSION["rol"] = $user["rol"];
         header("location: index.php");
     }
-
-    //if ($_SESSION["rol"] == "medewerker") {
-    //echo "U kan nu alles doen";
-    //header("location: index.php");
-    //} else if ($_SESSION["rol"] == "klant") {
-    //echo "U kan alleen een melding registreren";
-    //header("location: product-overzicht.php");
-    //}
+    // De gebruiker moet bepaalde dingen doen als ze een klant/medewerker zijn.
+    if ($_SESSION["rol"] == "medewerker") {
+        echo "U kan nu alles doen";
+        header("location: index.php");
+    } else if ($_SESSION["rol"] == "klant") {
+        header("location: hoofdpagina.php");
+    }
 }

@@ -73,7 +73,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <article class="blog">
          <h1>Blog</h1><br>
          <article class="blogs">
-            <h2>T</h2>
+            <h2>Sint Maarten special</h2>
             <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
@@ -83,7 +83,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </article>
          <br>
          <article class="blogs">
-            <h2>T</h2>
+            <h2>Halloween special</h2>
             <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
@@ -93,7 +93,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </article>
          <br>
          <article class="blogs">
-            <h2>Ijssalon sectie toegevoegd</h2>
+            <h2>IJssalon sectie toegevoegd</h2>
             <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae temporibus repudiandae rem doloremque et omnis quasi tempore perferendis tenetur corrupti illo, est eum quaerat distinctio. Voluptatem eligendi mollitia minus!

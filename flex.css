@@ -24,6 +24,7 @@ header {
   box-shadow: 0px 3px 5px;
 }
 header a {
+  text-decoration-line: underline;
   width: 30px;
 }
 svg {
@@ -70,6 +71,7 @@ article img {
   flex-wrap: wrap;
 }
 .bestel a {
+  text-decoration-line: underline;
   border-style: solid;
   border-radius: 10%;
   box-shadow: 0px 3px 5px;
@@ -157,6 +159,7 @@ footer {
   margin-bottom: 10x;
 }
 .s2 a {
+  text-decoration-line: underline;
   border-style: solid;
   border-radius: 10%;
   box-shadow: 0px 3px 5px;

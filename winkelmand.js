@@ -21,8 +21,8 @@ function leegInputVelden() {
     NOTITIE_CONTENT.value = "";
 }
 
-if(!localStorage.getItem("notities")){
-   localStorage.setItem("notities", "[]"); // [] is de standaard waarde omdat als een array moet functioneren.
+if(!localStorage.getItem("products")){
+   localStorage.setItem("products", "[]"); // [] is de standaard waarde omdat als een array moet functioneren.
 }
 
 VOEG_NOTITIES_TOE_KNOP.addEventListener('click', () => {
@@ -36,21 +36,21 @@ SLUIT_DIALOOG_KNOP.addEventListener('click', () => {
 
 NOTITIE_OPSLAAN_KNOP.addEventListener('click', () => {
    // Object aanmaken met de gegevens uit de velden.
-   let notitie = {
+   let products = {
        titel: NOTITIE_TITEL.value,
        content: NOTITIE_CONTENT.value
    };
 
-   console.log(localStorage.getItem("notities"));
+   console.log(localStorage.getItem("products"));
 
    // Pak de huidige notitie object en zet om in leesbaar JSON formaat.
-   let huidigeOpslag = JSON.parse(localStorage.getItem("notities"));
+   let huidigeOpslag = JSON.parse(localStorage.getItem("products"));
 
    // Notities localstorage is een array formaat en we voegen een nieuwe notitie toe.
    huidigeOpslag.push(notitie);
 
    // huidigeOpslag heeft nu een nieuwe notitie in geheugen en schrijven de "notities" item over.
-   localStorage.setItem("notities", JSON.stringify(huidigeOpslag));
+   localStorage.setItem("products", JSON.stringify(huidigeOpslag));
 
    leegInputVelden();
 
@@ -60,19 +60,19 @@ NOTITIE_OPSLAAN_KNOP.addEventListener('click', () => {
 
 NOTITIE_OPSLAAN_KNOP.addEventListener('click', () => {
    // Object aanmaken met de gegevens uit de velden.
-   let notitie = {
+   let products = {
        titel: NOTITIE_TITEL.value,
        content: NOTITIE_CONTENT.value
    };
 
    // Pak de huidige notitie object en zet om in leesbaar JSON formaat.
-   let huidigeOpslag = JSON.parse(localStorage.getItem("notities"));
+   let huidigeOpslag = JSON.parse(localStorage.getItem("products"));
 
    // Notities localstorage is een array formaat en we voegen een nieuwe notitie toe.
    huidigeOpslag.push(notitie);
 
    // huidigeOpslag heeft nu een nieuwe notitie in geheugen en schrijven de "notities" item over.
-   localStorage.setItem("notities", JSON.stringify(huidigeOpslag));
+   localStorage.setItem("products", JSON.stringify(huidigeOpslag));
 
    leegInputVelden();
 
@@ -90,7 +90,7 @@ NOTITIE_OPSLAAN_KNOP.addEventListener('click', () => {
    NOTITIE_LIJST.innerHTML = "";
 
    // Pak de notities lijst die nog in string fromaat is en zet on in leesbaar JSON formaat.
-   let notities = JSON.parse(localStorage.getItem("notities"));
+   let notities = JSON.parse(localStorage.getItem("products"));
 
    // Elke opgeslagen notitie pakken en in de HTML zetten.
    // onClick functie koppelen met de index van "i" zodat de functie kan indentificeren 
@@ -106,8 +106,8 @@ haalNotitiesOp();
  * Open de notitie bij index die in localStorage zit.
  * @param {Number} index 
  */
- function openNotitie(index) {
-   let notities = JSON.parse(localStorage.getItem("notities"));
-   NOTITIE_WEERGAVE_TITEL.innerText = notities[index].titel;
-   NOTITIE_WEERGAVE_CONTENT.innerText = notities[index].content;
+ function openProduct(index) {
+   let products = JSON.parse(localStorage.getItem("products"));
+   NOTITIE_WEERGAVE_TITEL.innerText = products[index].titel;
+   NOTITIE_WEERGAVE_CONTENT.innerText = products[index].content;
 }

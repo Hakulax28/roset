@@ -135,17 +135,18 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                            <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
                         <?php endforeach ?>
                      </select><br>
-                     <h2>Waar wil je het bezorgd?</h2>
-                     <input type="text" name="" id="" class="form-control"><br>
-                  </div>
-                  <div class="col-md-3 mx-auto">
+                  </div><br>
+                  <h1>Wil je het oppaken of laten bezorgen?</h1>
+                  <div>
                      <h2>Opgepakt</h2>
                      <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
                      <h2>Bezorgd</h2>
                      <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
+                     <h2>Waar wil je het bezorgd?</h2>
+                     <input type="text" name="" id="" class="form-control"><br>
                   </div>
                </div>
-               <div class="col-md-3 mx-auto">
+               <div>
                   <h2>Ontvangen</h2>
                   <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
                </div><br>

@@ -29,7 +29,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <aside class="s1">
          <br>
          <img src="img/logo.png" alt="">
-         <h3>De Roset</h3>
+         <h2>De Roset</h2>
       </aside>
       <header class="up">
          <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">

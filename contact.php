@@ -74,7 +74,7 @@ if (isset($_POST["submit"])) {
       <aside class="s1">
          <br>
          <img src="img/logo.png" alt="">
-         <h3>De Roset</h3>
+         <h2>De Roset</h2>
       </aside>
       <header class="up">
 

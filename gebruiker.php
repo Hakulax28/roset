@@ -110,6 +110,27 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
                   <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
                </svg>
                Bewerk jouw gegevens</a>
+            <!-- Dit is meer een test waarbij je jouw gegevens kan gaan verwijderen
+            <br><a style="box-shadow: 0px 1px 5px; border-style:solid;">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
+                  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                  <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+               </svg>
+               Delete jouw gegevens</a>
+               
+            hier staan de js data.
+            <script>
+               /*
+               function myFunction() {
+                  var txt;
+                  if (confirm("Weet je zeter dat je jouw gegevens wil verwijderen?")) {
+                     txt = "You pressed OK!";
+                  } else {
+                     txt = "You pressed Cancel!";
+                  }
+                  document.getElementById("demo").innerHTML = txt;
+               }*/
+            </script>-->
          </section>
       </article>
       <aside class="s3">

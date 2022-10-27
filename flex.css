@@ -153,13 +153,13 @@ footer {
 .s2 img {
   width: 150px;
   height: 150px;
-  border-style: solid;
   border-radius: 50%;
   box-shadow: 0px 3px 5px;
   margin-bottom: 10x;
 }
 .s2 a {
   border-style: solid;
+  border-radius: 10%;
   box-shadow: 0px 3px 5px;
 }
 .s2.div {

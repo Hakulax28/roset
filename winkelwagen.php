@@ -145,16 +145,22 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   </div>
                   <h1>Wil je het oppaken of laten bezorgen?</h1>
                   <div>
+                     <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
                      Oppakken<input type="checkbox" name="" id="" required>
                      bezorgen<input type="checkbox" name="" id="" required>
+
                      <h2>Opgepakt op</h2>
                      <input type="datetime-local" name="bezorg" id="bezorg" required><br>
                      <h2>Bezorgd in</h2>
                      <input type="datetime-local" name="bezorg" id="bezorg" required><br>
                      <h2>Waar wil je het bezorgd?</h2>
+
+                     <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
                      Castricum<input type="checkbox" name="stad" id="" required>
                      Uitgeest<input type="checkbox" name="stad" id="" required>
                      Akersloot<input type="checkbox" name="stad" id="" required>
+
+                     <!-- Dit zou ervoor zorgen dat de prijs ervoor komt als je de boven checkboxen heb in gevoerd -->
                      <?php if ("stad" == "Castricum") : ?>
                         <p>De bezorgkost is € 15,-</p>
                      <?php endif ?>

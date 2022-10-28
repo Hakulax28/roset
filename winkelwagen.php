@@ -110,7 +110,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
             </svg>
          </a>
-         <a href="gebruiker.php?id=2" style="box-shadow: 0px 1px 5px; border-style:solid;">
+         <a href="gebruiker.php?id=<?php echo $_SESSION["id"] ?>" style="box-shadow: 0px 1px 5px; border-style:solid;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
@@ -152,7 +152,18 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                      <h2>Bezorgd in</h2>
                      <input type="datetime-local" name="bezorg" id="bezorg" required><br>
                      <h2>Waar wil je het bezorgd?</h2>
-                     <input type="text" name="" id="" class="form-control"><br>
+                     Castricum<input type="checkbox" name="stad" id="" required>
+                     Uitgeest<input type="checkbox" name="stad" id="" required>
+                     Akersloot<input type="checkbox" name="stad" id="" required>
+                     <?php if ("stad" == "Castricum") : ?>
+                        <p>De bezorgkost is € 15,-</p>
+                     <?php endif ?>
+                     <?php if ("stad" == "Uitgeest") : ?>
+                        <p>De bezorgkost is € 16,-</p>
+                     <?php endif ?>
+                     <?php if ("stad" == "Akersloot") : ?>
+                        <p>De bezorgkost is € 18,-</p>
+                     <?php endif ?>
                   </div>
                </div>
                <div>

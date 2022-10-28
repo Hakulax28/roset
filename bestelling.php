@@ -86,7 +86,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <div>Bestel de smaak nu!</div>
          </a>
       </aside>
-      <article class="bestel" id="bestelling">
+      <article class="bestel" id="product">
          <h1>Bekijk de smaken!</h1><br>
          <section>
             <?php foreach ($products as $product) : ?>

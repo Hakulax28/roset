@@ -56,6 +56,9 @@ $sql = "SELECT * FROM product";
 $result = mysqli_query((new Database())->getConnection(), $sql);
 $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+$id = $_GET["id"]; //17
+
+$sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
 ?>
 
 <!DOCTYPE html>
@@ -133,6 +136,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <?php endforeach ?>
                      </select><br>
                      <h2>De product</h2>
+                     <input type="text" name="product" id="">
                      <select name="product">
                         <?php foreach ($all_products as $use) : ?>
                            <option selected='selected' id="productJava" value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>

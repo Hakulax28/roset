@@ -118,66 +118,43 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <div>Bestel de smaak nu!</div>
          </a>
       </aside>
-      <article class="main">
-         <h1>Bestel uw product</h1><br>
+      <article class="shop">
          <section id="winkelmandProduct">
             <form action="winkelwagen.php" method="post">
-               <div>
-                  <div>
-                     <h2>De besteller</h2>
-                     <select name="user">
-                        <?php
-                        foreach ($all_users as $use) : ?>
-                           <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
-                        <?php endforeach ?>
-                     </select><br>
-                     <h2>De product</h2>
-                     <input type="text" name="product" id="">
-                     <select name="product">
-                        <?php foreach ($all_products as $use) : ?>
-                           <option selected='selected' id="productJava" value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
-                        <?php endforeach ?>
-                     </select><br>
-                  </div>
-                  <h1>Wil je het oppaken of laten bezorgen?</h1>
-                  <div>
-                     <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
-                     Oppakken<input type="checkbox" name="" id="" required>
-                     bezorgen<input type="checkbox" name="" id="" required>
-
-                     <h2>Opgepakt op</h2>
-                     <input type="datetime-local" name="bezorg" id="bezorg" required><br>
-                     <h2>Bezorgd in</h2>
-                     <input type="datetime-local" name="bezorg" id="bezorg" required><br>
-                     <h2>Waar wil je het bezorgd?</h2>
-
-                     <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
-                     Castricum<input type="checkbox" name="stad" id="" required>
-                     Uitgeest<input type="checkbox" name="stad" id="" required>
-                     Akersloot<input type="checkbox" name="stad" id="" required>
-
-                     <!-- Dit zou ervoor zorgen dat de prijs ervoor komt als je de boven checkboxen heb in gevoerd -->
-                     <?php if ("stad" == "Castricum") : ?>
-                        <p>De bezorgkost is € 15,-</p>
-                     <?php endif ?>
-                     <?php if ("stad" == "Uitgeest") : ?>
-                        <p>De bezorgkost is € 16,-</p>
-                     <?php endif ?>
-                     <?php if ("stad" == "Akersloot") : ?>
-                        <p>De bezorgkost is € 18,-</p>
-                     <?php endif ?>
-                  </div>
-               </div>
-               <div>
-                  <h2>Ontvangen</h2>
-                  <input type="text" name="ontvang" id="ontvang" class="form-control" placeholder="Vul de ontvanging toe" required><br>
-               </div><br>
-               <div class=" form-group">
-                  <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                     </svg>
-                     Bestel jouw ijsje!</a>
-               </div><br>
+               <section>
+                  <h1>Bestel uw product</h1>
+                  <h2>De besteller</h2>
+                  <select name="user">
+                     <?php
+                     foreach ($all_users as $use) : ?>
+                        <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
+                     <?php endforeach ?>
+                  </select>
+                  <h2>De product</h2>
+                  <select name="product">
+                     <?php foreach ($all_products as $use) : ?>
+                        <option selected='selected' id="productJava" value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
+                     <?php endforeach ?>
+                  </select>
+                  <h1>Wil je het oppaken of laten bezorgen?</h1><br>
+                  <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
+                  Oppakken<input type="checkbox" name="" id="" required>
+                  Bezorgen<input type="checkbox" name="" id="" required>
+                  <h2>Opgepakt op</h2>
+                  <input type="datetime-local" name="bezorg" id="bezorg" required><br>
+                  <h2>Bezorgd in</h2>
+                  <input type="datetime-local" name="bezorg" id="bezorg" required><br>
+                  <h2>Waar wil je het bezorgd?</h2>
+                  <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
+                  <select name="stad">
+                     <option value="Castricum">Castricum</option>
+                     <option value="Uitgeest">Uitgeest</option>
+                     <option value="Akersloot">Akersloot</option>
+                  </select>
+               </section><br>
+               <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                  </svg>Bestel jouw ijsje!</a>
             </form>
          </section>
       </article>

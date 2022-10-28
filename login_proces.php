@@ -12,7 +12,7 @@ if (empty($_POST["email"]) && empty($_POST["wachtwoord"])) {
 
 $email = $_POST["email"];
 $password = $_POST["wachtwoord"];
-
+$rol = $_POST["rol"];
 
 $sql = "SELECT * FROM user WHERE email = '$email' ";
 
@@ -37,13 +37,13 @@ if ($result) {
         $_SESSION["rol"] = $user["rol"];
 
         var_dump($_SESSION);
-        //Hier bekijkt hij of degene die heeft ingelogd een gebruiker of personeel is.
-        if ($_SESSION["rol"] == "personeel") {
+        //Hier bekijkt hij of degene die heeft ingelogd een klant of medewerker is.
+        if ($_SESSION["rol"] == "mederwerker") {
             echo "U kan nu alles doen";
-            header("location: gebruiker-overzicht.php");
-        } else if ($_SESSION["rol"] == "gebruiker") {
-            echo "U kan alleen een melding registreren";
-            header("location: melding-overzicht.php");
+            header("location: index.php");
+        } else if ($_SESSION["rol"] == "klant") {
+            echo "U kan alleen de website zelf bekijken";
+            header("location: hoofdpagina.php");
         }
     }
 }

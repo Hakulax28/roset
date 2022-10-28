@@ -72,6 +72,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
    <meta name="description" content="De winkelwagen">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="flex.css">
+   <script src="winkelmand.js"></script>
    <title>De Roset</title>
 </head>
 

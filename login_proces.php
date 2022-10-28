@@ -1,6 +1,7 @@
 <?php
 
 require 'classes/database.php';
+require 'classes/user.php';
 
 session_start();
 
@@ -10,6 +11,7 @@ if (empty($_POST["email"]) && empty($_POST["wachtwoord"])) {
     header("location: inloggen.php");
 }
 
+$id = $_POST["id"];
 $email = $_POST["email"];
 $password = $_POST["wachtwoord"];
 $rol = $_POST["rol"];
@@ -17,7 +19,6 @@ $rol = $_POST["rol"];
 $sql = "SELECT * FROM user WHERE email = '$email' ";
 
 $result = mysqli_query((new Database())->getConnection(), $sql);
-
 //var_dump(mysqli_num_rows($result));die;
 
 if ($result) {
@@ -35,6 +36,7 @@ if ($result) {
         $_SESSION["email"] = $user["email"];
         $_SESSION["is_logged_in"] = true;
         $_SESSION["rol"] = $user["rol"];
+        $_SESSION["id"] = $user["id"];
 
         var_dump($_SESSION);
         //Hier bekijkt hij of degene die heeft ingelogd een klant of medewerker is.

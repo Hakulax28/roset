@@ -2,8 +2,6 @@
 class User
 {
     private $conn;
-    private $tableName = "user";
-
 
     public function __construct($conn)
     {
@@ -29,7 +27,3 @@ class User
         return mysqli_fetch_all($this->query($sql));
     }
 }
-
-$user = new User($conn);
-
-print_r($user->getSingle(1));

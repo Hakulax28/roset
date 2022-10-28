@@ -1,11 +1,16 @@
 <?php require 'classes/database.php';
+require 'classes/user.php';
 
 session_start();
 
 if (!$_SESSION["is_logged_in"]) {
    header("location: inloggen.php");
 }
+$dbconn = new Database();
 
+$user = new User($dbconn->getConnection());
+
+$userData = $user->getSingle($_SESSION["id"]);
 if (isset($_POST["submit"])) {
 
    if (

@@ -1,11 +1,16 @@
 <?php require 'classes/database.php';
+require 'classes/user.php';
 
 session_start();
 
 if (!$_SESSION["is_logged_in"]) {
    header("location: inloggen.php");
 }
+$dbconn = new Database();
 
+$user = new User($dbconn->getConnection());
+
+$userData = $user->getSingle($_SESSION["id"]);
 // hier moet de info van de smaak van de week erop komen. 
 $sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {

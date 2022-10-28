@@ -56,10 +56,6 @@ $sql = "SELECT * FROM product";
 $result = mysqli_query((new Database())->getConnection(), $sql);
 $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//$id = $_GET["id"]; //17
-
-//$sql = "SELECT * FROM product WHERE id = $id LIMIT 1";
-
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +68,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
    <meta name="description" content="De winkelwagen">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="flex.css">
-   <script src="winkelmand.js"></script>
+   <script src="winkelmand.js" defer></script>
    <title>De Roset</title>
 </head>
 
@@ -125,7 +121,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </aside>
       <article class="main">
          <h1>Bestel uw product</h1><br>
-         <section>
+         <section id="winkelmandProduct">
             <form action="winkelwagen.php" method="post">
                <div>
                   <div>
@@ -139,7 +135,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                      <h2>De product</h2>
                      <select name="product">
                         <?php foreach ($all_products as $use) : ?>
-                           <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
+                           <option selected='selected' id="productJava" value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
                         <?php endforeach ?>
                      </select><br>
                   </div>

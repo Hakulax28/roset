@@ -1,4 +1,6 @@
-const winkelmandProducten = document.getElementById("winkelmandPro");
+const winkelmandProducten = document.getElementById("winkelmandProduct");
+
+const productJava = document.getElementById("productJava");
 
 if (winkelmandProducten) {
     winkelwagen();
@@ -25,11 +27,20 @@ function voegToeAanWinkelwagen(id, naam, price_per_kg) {
 }
 
 function winkelwagen() {
+
+    productJava.value = f;
+
     let products = JSON.parse(localStorage.getItem("product"));
 
     for (let i = 0; i < products.length; i++) {
         winkelmandProduct.innerHTML +=
-        "<p>" + products[i].naam + " " + products[i].prijs + "</p>" + "<input type='hidden' name='id[]' value=" + products[i].id + ">" +
+        "<p>" + 
+        products[i].naam + 
+        " " + 
+        products[i].prijs + 
+        "</p>" + 
+        "<input type='hidden' name='id[]' value=" + 
+        products[i].id + ">" +
         "</form>";
         console.log(products[i]);
     }

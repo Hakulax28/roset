@@ -145,10 +145,12 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   </div><br>
                   <h1>Wil je het oppaken of laten bezorgen?</h1>
                   <div>
-                     <h2>Opgepakt</h2>
-                     <input type="datetime-local" name="oppak" id="oppak" class="form-control" required><br>
-                     <h2>Bezorgd</h2>
-                     <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" required><br>
+                     Oppakken<input type="checkbox" name="" id="" required>
+                     bezorgen<input type="checkbox" name="" id="" required>
+                     <h2>Opgepakt op</h2>
+                     <input type="datetime-local" name="bezorg" id="bezorg" required><br>
+                     <h2>Bezorgd in</h2>
+                     <input type="datetime-local" name="bezorg" id="bezorg" required><br>
                      <h2>Waar wil je het bezorgd?</h2>
                      <input type="text" name="" id="" class="form-control"><br>
                   </div>

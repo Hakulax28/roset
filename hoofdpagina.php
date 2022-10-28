@@ -5,15 +5,13 @@ session_start();
 if (!$_SESSION["is_logged_in"]) {
    header("location: inloggen.php");
 }
-// hier moet de info van alle producten erop komen. 
-
+// hier moet de info van de smaak van de week erop komen. 
 $sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
-
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $foto = mysqli_fetch_assoc($result);
 }
 
-$sql = "SELECT * FROM orders WHERE gebr_id = 2";
+/*$sql = "SELECT * FROM orders WHERE gebr_id = 2";
 
 $sql = "SELECT *, user.achternaam as gebr_id, product.naam as product_id 
 FROM orders
@@ -22,7 +20,7 @@ JOIN product ON product.id = orders.product_id ";
 
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $order = mysqli_fetch_all($result, MYSQLI_ASSOC);
-}
+}*/
 ?>
 
 <!DOCTYPE html>

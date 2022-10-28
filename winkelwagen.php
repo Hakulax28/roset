@@ -1,6 +1,10 @@
-<?php
+<?php require 'classes/database.php';
 
-require_once 'classes/database.php';
+session_start();
+
+if (!$_SESSION["is_logged_in"]) {
+   header("location: inloggen.php");
+}
 
 if (isset($_POST["submit"])) {
 
@@ -33,14 +37,11 @@ if (isset($_POST["submit"])) {
       die("");
    }
 }
-
+// hier moet de info van de smaak van de week erop komen. 
 $sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
-
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $foto = mysqli_fetch_assoc($result);
 }
-
-// hier moet de info van alle producten erop komen. 
 
 $sql = "SELECT * FROM user";
 $result = mysqli_query((new Database())->getConnection(), $sql);
@@ -176,12 +177,20 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <h1>Bestelingen</h1>
          </section>
          <section class="se2">
-            <a href="index.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-                  <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
-                  <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z" />
-               </svg>
-               Ga hier terug</a>
+            <?php if ($_SESSION['rol'] == "klant") : ?>
+               <a href="loguit.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                     <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                     <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z" />
+                  </svg> Ga hier terug</a>
+            <?php endif ?>
+            <?php if ($_SESSION['rol'] == "medewerker") : ?>
+               <a href="index.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                     <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                     <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z" />
+                  </svg> Ga hier terug</a>
+            <?php endif ?>
             <a href="https://www.deroset.nl/pg-28689-7-93854/pagina/welkom.html" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                   <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
                </svg> Hoofd website</a>

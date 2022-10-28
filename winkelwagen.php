@@ -142,7 +142,7 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                            <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
                         <?php endforeach ?>
                      </select><br>
-                  </div><br>
+                  </div>
                   <h1>Wil je het oppaken of laten bezorgen?</h1>
                   <div>
                      Oppakken<input type="checkbox" name="" id="" required>

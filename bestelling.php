@@ -91,7 +91,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <section>
             <?php foreach ($products as $product) : ?>
                <!--<td><?php echo $product["id"] ?></td>-->
-               <a href="winkelwagen.php?id=<?php echo $product["id"] ?>"><img src="image/<?php echo $product["foto"] ?>.jpg" alt="">
+               <a href="winkelwagen.php?id=<?php echo $product["id"] ?>"><img src="image/<?php echo $product["foto"] ?>.jpg" id="winkelmandPro" onclick="winkelwagen()" alt="">
                   <div><?php echo $product["naam"] ?><br>€ <?php echo $product["prijs_per_kg"] ?></div>
                </a>
             <?php endforeach; ?>

@@ -1,4 +1,4 @@
-const winkelmandProducten = document.getElementById("winkelmandProducten");
+const winkelmandProducten = document.getElementById("winkelmandPro");
 
 if (winkelmandProducten) {
     winkelwagen();

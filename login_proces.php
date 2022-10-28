@@ -38,7 +38,7 @@ if ($result) {
 
         var_dump($_SESSION);
         //Hier bekijkt hij of degene die heeft ingelogd een klant of medewerker is.
-        if ($_SESSION["rol"] == "mederwerker") {
+        if ($_SESSION["rol"] == "medewerker") {
             echo "U kan nu alles doen";
             header("location: index.php");
         } else if ($_SESSION["rol"] == "klant") {

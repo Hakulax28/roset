@@ -97,7 +97,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <div>Bestel de smaak nu!</div>
          </a>
       </aside>
-      <article class="main">
+      <article class="mainu">
          <h1>Uw gegevens</h1>
          <section class="se1">
             <h2>Naam</h2>

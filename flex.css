@@ -289,6 +289,9 @@ footer {
     box-shadow: 0px 2px 5px;
     float: center;
   }
+  .main {
+    overflow: scroll;
+  }
   .main img {
     width: 210px;
     height: 140px;
@@ -542,6 +545,9 @@ footer {
     margin-top: 10px;
     box-shadow: 0px 2px 5px;
     float: center;
+  }
+  .main {
+    overflow: scroll;
   }
   .main img {
     width: 210px;

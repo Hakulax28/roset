@@ -98,7 +98,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          </a>
       </aside>
       <article class="main">
-         <h1>Uw gegevens</h1><br>
+         <h1>Uw gegevens</h1>
          <section class="se1">
             <h2>Naam</h2>
             <p><?php echo $userData["voornaam"] ?> <?php echo $userData["achternaam"] ?></p>

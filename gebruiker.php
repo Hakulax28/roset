@@ -99,31 +99,33 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       </aside>
       <article class="main">
          <h1>Uw gegevens</h1><br>
-         <section>
+         <section class="se1">
             <h2>Naam</h2>
             <p><?php echo $userData["voornaam"] ?> <?php echo $userData["achternaam"] ?></p>
             <h2>E-mail</h2>
             <p><?php echo $userData["email"] ?></p>
             <h2>Geboortedatum</h2>
             <p><?php echo $userData["geboortedatum"] ?></p>
+         </section>
+         <section class="se1">
             <h2>Telefoonnummer</h2>
             <p><?php echo $userData["telefoon"] ?></p>
             <h2>Adres</h2>
             <p><?php echo $userData["adres"] ?> <?php echo $userData["postcode"] ?> <?php echo $userData["stad"] ?></p>
             <h2>Wat ben ik</h2>
-            <p>Een <?php echo $userData["rol"] ?></p><br>
-            <a href="user_update.php?id=2" style="box-shadow: 0px 1px 5px; border-style:solid;">
-               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
-               </svg> Bewerk jouw gegevens</a><br>
-            <br><a href="user_delete.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
-                  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                  <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
-               </svg> Delete jouw gegevens</a>
-            <p>! je kan jezelf weer registreren</p>
+            <p>Een <?php echo $userData["rol"] ?></p>
          </section>
+         <a href="user_update.php?id=2" style="box-shadow: 0px 1px 5px; border-style:solid;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+               <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+               <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+            </svg> Bewerk jouw gegevens</a><br>
+         <br><a href="user_delete.php" style="box-shadow: 0px 1px 5px; border-style:solid;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
+               <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+               <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+            </svg> Delete jouw gegevens</a>
+         <p style="color: red; text-shadow: 0px 3px 3px #000000">! je kan jezelf weer registreren</p>
       </article>
       <aside class="s3">
          <h1>Populaire smaken</h1>

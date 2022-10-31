@@ -201,7 +201,7 @@ footer {
   float: left;
   text-align: center;
 }
-@media (min-width: 755px) and (max-width: 1430px) and (min-height: 750px) {
+@media (min-width: 755px) and (max-width: 1430px) {
   .container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);

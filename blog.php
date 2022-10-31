@@ -36,9 +36,8 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    <div class="container">
 
       <aside class="s1">
-         <br>
          <img src="img/logo.png" alt="">
-         <h2>De Roset</h2>
+         <h1>De Roset</h1>
       </aside>
       <header class="up">
          <a href="hoofdpagina.php" style="box-shadow: 0px 1px 5px; border-style:solid;">

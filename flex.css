@@ -25,11 +25,11 @@ header {
 }
 header a {
   text-decoration-line: underline;
-  width: 30px;
+  width: 50px;
 }
 svg {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 a:link,
 a:visited {
@@ -190,7 +190,9 @@ footer {
   margin-right: 5px;
   border-style: solid;
   box-shadow: 0px 3px 5px;
+  width: 300px;
   margin: auto;
+  text-align: center;
 }
 .s1 img {
   height: 125px;
@@ -356,10 +358,11 @@ footer {
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 4;
+    padding-bottom: 5px;
   }
   .s2 img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
   .s2.div {
     text-align: center;
@@ -372,8 +375,8 @@ footer {
     grid-row-end: 4;
   }
   .s3 img {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
   }
 }
 /*@media (min-width: 820px) and (max-width: 910px) and (min-height: 950px) {
@@ -524,15 +527,15 @@ footer {
   }
   header a {
     text-decoration-line: underline;
-    width: 50px;
+    width: 20px;
   }
   a:link,
   a:visited {
     padding: 8px 15px;
   }
   svg {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
   }
   article {
     grid-column-start: 1;
@@ -576,12 +579,15 @@ footer {
     padding: 4px 12px;
     margin: 4px 0;
   }
+  .shop {
+    overflow: auto;
+  }
   .shop input,
   select {
     width: 50%;
   }
   .se1 {
-    width: 40%;
+    width: 30%;
     margin-left: 60px;
     margin-top: 20px;
     float: left;
@@ -613,17 +619,18 @@ footer {
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 4;
+    padding-bottom: 5px;
   }
   .s2 img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
   .s2.div {
     text-align: center;
     padding: 10px 20px;
   }
   .s3 {
-    grid-column-start: 6;
+    grid-column-start: 5;
     grid-column-end: 10;
     grid-row-start: 4;
     grid-row-end: 4;

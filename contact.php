@@ -82,9 +82,8 @@ if (isset($_POST["submit"])) {
    <div class="container">
 
       <aside class="s1">
-         <br>
          <img src="img/logo.png" alt="">
-         <h2>De Roset</h2>
+         <h1>De Roset</h1>
       </aside>
       <header class="up">
 
@@ -126,7 +125,7 @@ if (isset($_POST["submit"])) {
             <div>Bestel de smaak nu!</div>
          </a>
       </aside>
-      <article class="mainc">
+      <article class="main">
          <h1>Wil je bij ons werken? Solliciteer nu!</h1>
          <br>
          <section class="contact">

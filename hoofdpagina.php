@@ -46,7 +46,6 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
 <body>
    <div class="container">
       <aside class="s1">
-         <br>
          <img src="img/logo.png" alt="">
          <h2>De Roset</h2>
       </aside>

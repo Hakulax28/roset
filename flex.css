@@ -59,6 +59,7 @@ article {
 article img {
   margin-top: 10px;
   box-shadow: 0px 2px 5px;
+  float: center;
 }
 .main img {
   width: 350px;
@@ -98,6 +99,13 @@ article img {
 .shop input,
 select {
   width: 20%;
+}
+.se1 {
+  width: 500px;
+  margin-left: 100px;
+  margin-top: 50px;
+  float: left;
+  text-align: center;
 }
 input[type="text"],
 select {
@@ -169,13 +177,6 @@ footer {
   box-shadow: 0px 3px 5px;
 }
 
-.se1 {
-  width: 500px;
-  margin-left: 100px;
-  margin-top: 50px;
-  float: left;
-  text-align: center;
-}
 .se2 {
   width: 600px;
   float: left;

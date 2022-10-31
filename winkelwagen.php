@@ -137,9 +137,9 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                      <?php endforeach ?>
                   </select>
                   <h1>Wil je het oppaken of laten bezorgen?</h1><br>
-                  <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
-                  <p>Oppakken<input type="checkbox" name="" id="" required></p>
-                  <p>Bezorgen<input type="checkbox" name="" id="" required></p>
+                  <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen
+                  Oppakken<input type="checkbox" name="" id="" required>
+                  Bezorgen<input type="checkbox" name="" id="" required>-->
                   <!--<h2>Opgepakt op</h2>
                   <input type="datetime-local" name="bezorg" id="bezorg" required><br>-->
                   <h2>Bezorgd in</h2>

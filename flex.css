@@ -78,8 +78,8 @@ article img {
   margin-bottom: 10px;
 }
 .bestel img {
-  width: 140px;
-  height: 140px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   box-shadow: 0px 3px 5px;
 }
@@ -248,7 +248,7 @@ footer {
   border-style: solid;
   box-shadow: 0px 3px 5px;
 }
-@media (min-width: 850px) and (max-width: 1430px) and (min-height: 950px) {
+@media (min-width: 755px) and (max-width: 1430px) and (min-height: 750px) {
   .container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -317,9 +317,7 @@ footer {
     margin-bottom: 25px;
   }
   .contact input {
-    width: 30%;
-    padding: 4px 12px;
-    margin: 4px 0;
+    width: 50%;
   }
   .shop input,
   select {
@@ -379,134 +377,8 @@ footer {
     width: 80px;
   }
 }
-/*@media (min-width: 820px) and (max-width: 910px) and (min-height: 950px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-gap: 8px;
-    height: 900px;
-  }
-  .container * {
-    margin-bottom: 1px;
-    margin-right: 1px;
-  }
-  header {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-gap: 20px;
-  }
-  header a {
-    text-decoration-line: underline;
-    width: 50px;
-  }
-  a:link,
-  a:visited {
-    padding: 8px 15px;
-  }
-  svg {
-    width: 32px;
-    height: 32px;
-  }
-  article {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    height: 500px;
-  }
-  article img {
-    margin-top: 10px;
-    box-shadow: 0px 2px 5px;
-    float: center;
-  }
-  .main img {
-    width: 210px;
-    height: 140px;
-  }
-  .bestel {
-    overflow: auto;
-  }
-  .bestel img {
-    width: 120px;
-    height: 120px;
-  }
-  .bestel.div {
-    text-align: center;
-    padding: 10px 20px;
-  }
-  .blogs {
-    height: 100px;
-    overflow: auto;
-  }
-  .contact {
-    margin-bottom: 25px;
-  }
-  .contact input {
-    width: 30%;
-    padding: 4px 12px;
-    margin: 4px 0;
-  }
-  .shop input,
-  select {
-    width: 50%;
-  }
-  .se1 {
-    width: 40%;
-    margin-left: 60px;
-    margin-top: 20px;
-    float: left;
-  }
-  footer {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    grid-row-start: 5;
-    grid-row-end: 5;
-  }
 
-  .se2 {
-    width: 400px;
-    float: left;
-  }
-  .s1 {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    margin: auto;
-  }
-  .s1 img {
-    width: 120px;
-    height: 120px;
-  }
-  .s2 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .s2 img {
-    width: 80px;
-    height: 80px;
-  }
-  .s2.div {
-    text-align: center;
-    padding: 10px 20px;
-  }
-  .s3 {
-    grid-column-start: 6;
-    grid-column-end: 10;
-    grid-row-start: 4;
-    grid-row-end: 4;
-  }
-  .s3 img {
-    height: 60px;
-    width: 60px;
-  }
-}*/
-@media only screen and (min-width: 410px) and (max-width: 850px) {
+@media only screen and (min-width: 360px) and (max-width: 755px) {
   .container {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -575,16 +447,14 @@ footer {
     margin-bottom: 25px;
   }
   .contact input {
-    width: 30%;
-    padding: 4px 12px;
-    margin: 4px 0;
+    width: 100%;
   }
   .shop {
     overflow: auto;
   }
   .shop input,
   select {
-    width: 50%;
+    width: 100%;
   }
   .se1 {
     width: 30%;

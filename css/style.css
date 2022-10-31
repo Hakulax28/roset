@@ -26,6 +26,11 @@ h1 {
   font-size: 50px;
   text-shadow: 0px 5px #47474760;
 }
+span {
+  font-style: italic;
+  color: #1112a4;
+  font-family: cursive;
+}
 @media (min-width: 820px) and (max-width: 1430px) {
   p {
     font-size: 15px;

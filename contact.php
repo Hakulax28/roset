@@ -83,7 +83,7 @@ if (isset($_POST["submit"])) {
 
       <aside class="s1">
          <img src="img/logo.png" alt="">
-         <h1>De Roset</h1>
+         <h1><span>De Roset</span></h1>
       </aside>
       <header class="up">
 

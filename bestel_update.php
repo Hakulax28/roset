@@ -36,9 +36,9 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
       <div class="row mx-auto">
          <div class="col-md-3 mx-auto">
             <p>Opgepakt</p>
-            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>" required><br>
+            <input type="datetime-local" name="oppak" id="oppak" class="form-control" value="<?php echo $order["oppak"] ?>"><br>
             <p>Bezorgd</p>
-            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>" required><br>
+            <input type="datetime-local" name="bezorg" id="bezorg" class="form-control" value="<?php echo $order["bezorg"] ?>"><br>
             <p>Ontvangen</p>
             <input type="text" name="ontvang" id="ontvang" class="form-control" value="<?php echo $order["ontvang"] ?>" required>
             <br>

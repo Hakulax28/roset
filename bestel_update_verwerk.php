@@ -3,7 +3,7 @@
 if (isset($_POST["submit"])) {
 
    $id = $_GET["ID"];
-   echo $id;
+   //echo $id;
    if (
       !empty($_POST["oppak"])
       && !empty($_POST["bezorg"])

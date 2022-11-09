@@ -15,6 +15,8 @@ if (isset($_POST["submit"])) {
 
    if (
       !empty($_POST["user"])
+      && !empty($_POST["stad"])
+      && !empty($_POST["kosten"])
       && !empty($_POST["product"])
       && !empty($_POST["ontvang"])
 

@@ -114,7 +114,7 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
             <h2>Wat ben ik</h2>
             <p>Een <?php echo $userData["rol"] ?></p>
          </section>
-         <a href="updaten1?id=<?php echo $_SESSION["id"] ?>" style="box-shadow: 0px 1px 5px; border-style:solid;">
+         <a href="user_update.php?id=<?php echo $_SESSION["id"] ?>" style="box-shadow: 0px 1px 5px; border-style:solid;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
                <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />

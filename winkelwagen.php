@@ -137,12 +137,12 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <section class="se1">
                   <h1>Oppakken of Bezorgen?</h1>
                   <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen
-                  Oppakken<input type="checkbox" name="" id="" required>
-                  Bezorgen<input type="checkbox" name="" id="" required>-->
+                  Oppakken<input type="checkbox" name="" id="" >
+                  Bezorgen<input type="checkbox" name="" id="" >-->
                   <!--<h2>Opgepakt op</h2>
-                  <input type="datetime-local" name="bezorg" id="bezorg" required><br>-->
+                  <input type="datetime-local" name="oppak" id="oppak" ><br>-->
                   <h2>Bezorgd in</h2>
-                  <input type="datetime-local" name="bezorg" id="bezorg" required><br>
+                  <input type="datetime-local" name="bezorg" id="bezorg"><br>
                   <h2>Waar wil je het bezorgd?</h2>
                   <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
                   <select name="stad">

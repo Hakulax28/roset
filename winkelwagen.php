@@ -16,8 +16,6 @@ if (isset($_POST["submit"])) {
    if (
       !empty($_POST["user"])
       && !empty($_POST["product"])
-      && !empty($_POST["oppak"])
-      && !empty($_POST["bezorg"])
       && !empty($_POST["ontvang"])
 
    ) {

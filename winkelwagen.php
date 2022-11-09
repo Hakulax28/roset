@@ -149,15 +149,16 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <section class="se1">
                   <h2>Waar wil je het bezorgd?</h2>
                   <select name="stad" aria-placeholder="">
-                     <option value="Castricum">Castricum</option>
-                     <option value="Uitgeest">Uitgeest</option>
-                     <option value="Akersloot">Akersloot</option>
+                     <option value="1">Afgehaald</option>
+                     <option value="2">Castricum</option>
+                     <option value="3">Uitgeest</option>
+                     <option value="4">Akersloot</option>
                   </select>
                   <h2>Dan kost het</h2>
                   <select name="kosten" aria-placeholder="">
-                     <option value="Castricum">15</option>
-                     <option value="Uitgeest">16</option>
-                     <option value="Akersloot">18</option>
+                     <option value="2">15</option>
+                     <option value="3">16</option>
+                     <option value="4">18</option>
                   </select>
                </section>
                <section class="se1">

@@ -17,51 +17,6 @@ $sql = "SELECT foto FROM product WHERE smaak_van_de_week = 'ja'";
 if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $foto = mysqli_fetch_assoc($result);
 }
-
-if (isset($_POST["submit"])) {
-
-   if (
-      !empty($_POST["voornaam"])
-      || !empty($_POST["achternaam"])
-      && !empty($_POST["email"])
-      && !empty($_POST["wachtwoord"])
-      && !empty($_POST["geboortedatum"])
-      && !empty($_POST["telefoon"])
-      && !empty($_POST["adres"])
-      && !empty($_POST["postcode"])
-      && !empty($_POST["stad"])
-      && !empty($_POST["rol"])
-
-   ) {
-      // als op registreer wordt gedrukt 
-      if (isset($_POST['submit'])) {
-
-
-         $voornaam = $_POST['voornaam'];
-         $achternaam = $_POST['achternaam'];
-         $email = trim($_POST["email"]);
-         $wachtwoord = $_POST['wachtwoord'];
-         $geboortedatum = $_POST['geboortedatum'];
-         $telefoon = $_POST['telefoon'];
-         $adres = $_POST['adres'];
-         $postcode = $_POST['postcode'];
-         $stad = $_POST['stad'];
-         $rol = $_POST['rol'];
-
-         //database connectie
-
-         require 'classes/database.php';
-         $sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, stad, rol)
-                VALUES ('$voornaam', '$achternaam', '$email', '$wachtwoord', '$geboortedatum', '$telefoon', '$adres', '$postcode','$stad', '$rol')";
-
-         // Voer de INSERT INTO STATEMENT uit
-         if (mysqli_query((new Database())->getConnection(), $sql)) {
-            header("location: user_overzicht.php");
-         }
-         mysqli_close($conn); // Sluit de database verbinding
-      }
-   }
-}
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +84,7 @@ if (isset($_POST["submit"])) {
          <h1>Wil je bij ons werken? Solliciteer nu!</h1>
          <br>
          <section class="contact">
-            <form action="contact.php" method="post">
+            <form action="user_registreer_verwerk.php" method="post">
                <section class="se1">
                   <h2>Voornaam</h2>
                   <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
@@ -137,6 +92,8 @@ if (isset($_POST["submit"])) {
                   <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
                   <h2>E-Mail</h2>
                   <input type="email" name="email" id="" placeholder="Vul je email in" required>
+                  <h2>Wachtwoord</h2>
+                  <input type="password" name="wachtwoord" id="" placeholder="Vul je email in" required>
                   <h2>Geboortedatum</h2>
                   <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
                </section>
@@ -149,6 +106,8 @@ if (isset($_POST["submit"])) {
                   <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
                   <h2>Stad</h2>
                   <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
+                  <h2>Uw rol is</h2>
+                  <input type="text" name="rol" id="" placeholder="medewerker">
                </section>
                <section class="se1">
                   <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-send-check" viewBox="0 0 16 16">

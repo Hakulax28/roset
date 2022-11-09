@@ -5,9 +5,7 @@ if (isset($_POST["submit"])) {
    $id = $_GET["ID"];
    //echo $id;
    if (
-      !empty($_POST["oppak"])
-      && !empty($_POST["bezorg"])
-      && !empty($_POST["ontvang"])
+      !empty($_POST["ontvang"])
 
    ) {
       //allemaal moeten ze true zijn

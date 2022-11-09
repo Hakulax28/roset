@@ -32,7 +32,7 @@ if (isset($_POST["submit"])) {
       //database connectie
 
       $sql = "INSERT INTO orders (gebr_id, product_id, oppak, bezorg, stad, kosten, ontvang) 
-                VALUES ('$user', '$product', '$oppak', '$bezorg', '$stad', '$kosten','$ontvang')";
+                VALUES ('$user', '$product', '$oppak', '$bezorg', '$stad', '$kost','$ontvang')";
 
       // Voer de INSERT INTO STATEMENT uit
       if (mysqli_query((new Database())->getConnection(), $sql)) {

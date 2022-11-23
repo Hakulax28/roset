@@ -11,6 +11,7 @@ $dbconn = new Database();
 $user = new User($dbconn->getConnection());
 
 $userData = $user->getSingle($_SESSION["id"]);
+
 if (isset($_POST["submit"])) {
 
    if (
@@ -122,50 +123,37 @@ $all_products = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <article class="shop">
          <section id="winkelmandProduct">
             <form action="winkelwagen.php" method="post">
-               <section class="se1">
-                  <h1>Bestel uw product</h1>
-                  <h2>De besteller</h2>
-                  <select name="user">
-                     <?php
-                     foreach ($all_users as $use) : ?>
-                        <option selected='selected' value='<?php echo $use['id'] ?>'><?php echo $use["achternaam"] ?></option>
-                     <?php endforeach ?>
-                  </select>
-                  <h2>De product</h2>
-                  <select name="product">
-                     <?php foreach ($all_products as $use) : ?>
-                        <option selected='selected' id="productJava" value='<?php echo $use['id'] ?>'><?php echo $use['naam'] ?></option>
-                     <?php endforeach ?>
-                  </select>
-               </section>
-               <section class="se1">
-                  <h1>Oppakken of Bezorgen?</h1>
-                  <h2>Opgepakt op</h2>
-                  <input type="datetime-local" name="oppak" id="oppak"><br>
-                  <h2>Bezorgd in</h2>
-                  <input type="datetime-local" name="bezorg" id="bezorg"><br>
-                  <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
-               </section>
-               <section class="se1">
-                  <h2>Waar wil je het bezorgd?</h2>
-                  <select name="stad" aria-placeholder="">
-                     <option value="1">Afgehaald</option>
-                     <option value="2">Castricum</option>
-                     <option value="3">Uitgeest</option>
-                     <option value="4">Akersloot</option>
-                  </select>
-                  <h2>Dan kost het</h2>
-                  <select name="kosten" aria-placeholder="">
-                     <option value="2">15</option>
-                     <option value="3">16</option>
-                     <option value="4">18</option>
-                  </select>
-               </section>
-               <section class="se1">
-                  <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                     </svg>Bestel jouw ijsje!</a>
-               </section>
+               <h1>Bestel uw product</h1><br>
+               <?php $sql = "SELECT * FROM product WHERE id = {$_GET['id']}";
+
+               $ijsje_besteld =  mysqli_fetch_assoc(mysqli_query($dbconn->getConnection(), $sql));
+
+               var_dump($ijsje_besteld);
+               ?>
+               <h1>Oppakken of Bezorgen?</h1>
+               <h2>Opgepakt op</h2>
+               <input type="datetime-local" name="oppak" id="oppak"><br>
+               <h2>Bezorgd op</h2>
+               <input type="datetime-local" name="bezorg" id="bezorg"><br>
+               <!-- Deze checkboxen zouden de oppak of bezorging uitschakelen-->
+               <h2>Waar wil je het bezorgd?</h2>
+               <select name="stad" aria-placeholder="" onchange="setPrice(this)">
+                  <option value="0">Afgehaald</option>
+                  <option value="15">Castricum</option>
+                  <option value="16">Uitgeest</option>
+                  <option value="18">Akersloot</option>
+               </select>
+               <script>
+                  function setPrice(control) {
+                     let optionVal = control.value;
+                     document.querySelector("#prijs").innerHTML = optionVal;
+                  }
+               </script>
+               <h2>Dan kost het</h2>
+               <div>€ <span id="prijs"></span>,-</div><br>
+               <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                     <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                  </svg>Bestel jouw ijsje!</a>
             </form>
          </section>
       </article>

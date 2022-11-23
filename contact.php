@@ -18,6 +18,52 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
    $foto = mysqli_fetch_assoc($result);
 }
 ?>
+<?php
+if (isset($_POST["submit"])) {
+
+   if (
+      !empty($_POST["voornaam"])
+      || !empty($_POST["achternaam"])
+      && !empty($_POST["email"])
+      && !empty($_POST["wachtwoord"])
+      && !empty($_POST["geboortedatum"])
+      && !empty($_POST["telefoon"])
+      && !empty($_POST["adres"])
+      && !empty($_POST["postcode"])
+      && !empty($_POST["stad"])
+      && !empty($_POST["rol"])
+
+   ) {
+      // als op registreer wordt gedrukt 
+      if (isset($_POST['submit'])) {
+
+
+         $voornaam = $_POST['voornaam'];
+         $achternaam = $_POST['achternaam'];
+         $email = trim($_POST["email"]);
+         $wachtwoord = $_POST['wachtwoord'];
+         $geboortedatum = $_POST['geboortedatum'];
+         $telefoon = $_POST['telefoon'];
+         $adres = $_POST['adres'];
+         $postcode = $_POST['postcode'];
+         $stad = $_POST['stad'];
+         $rol = $_POST['rol'];
+
+         //database connectie
+
+         require 'classes/database.php';
+         $sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum, telefoon, adres, postcode, stad, rol)
+                VALUES ('$voornaam', '$achternaam', '$email', '$wachtwoord', '$geboortedatum', '$telefoon', '$adres', '$postcode','$stad', '$rol')";
+
+         // Voer de INSERT INTO STATEMENT uit
+         if (mysqli_query((new Database())->getConnection(), $sql)) {
+            header("location: inloggen.php");
+         }
+         mysqli_close($conn); // Sluit de database verbinding
+      }
+   }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,36 +130,37 @@ if ($result = mysqli_query((new Database())->getConnection(), $sql)) {
          <h1>Wil je bij ons werken? Solliciteer nu!</h1>
          <br>
          <section class="contact">
-            <form action="user_registreer_verwerk.php" method="post">
+            <form action="contact.php" method="post">
                <section class="se1">
                   <h2>Voornaam</h2>
-                  <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in" required>
+                  <input type="text" name="voornaam" id="" placeholder="Vul je voornaam in">
                   <h2>Achternaam</h2>
-                  <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in" required>
+                  <input type="text" name="achternaam" id="" placeholder="Vul je achternaam in">
                   <h2>E-Mail</h2>
-                  <input type="email" name="email" id="" placeholder="Vul je email in" required>
+                  <input type="email" name="email" id="" placeholder="Vul je email in">
                   <h2>Wachtwoord</h2>
-                  <input type="password" name="wachtwoord" id="" placeholder="Vul je email in" required>
+                  <input type="password" name="wachtwoord" id="" placeholder="Vul je email in">
                   <h2>Geboortedatum</h2>
-                  <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in" required>
+                  <input type="date" name="geboortedatum" id="" placeholder="Vul je geboortedatum in">
                </section>
                <section class="se1">
                   <h2>Telefoonnummer</h2>
-                  <input type="tel" name="telefoon" id="" placeholder="Vul je telefoonnummer in" required>
+                  <input type="tel" name="telefoon" id="" placeholder="Vul je telefoonnummer in">
                   <h2>Adres</h2>
-                  <input type="text" name="adres" id="" placeholder="Vul je adres in" required>
+                  <input type="text" name="adres" id="" placeholder="Vul je adres in">
                   <h2>Postcode</h2>
-                  <input type="text" name="postcode" id="" placeholder="Vul je postcode in" required>
+                  <input type="text" name="postcode" id="" placeholder="Vul je postcode in">
                   <h2>Stad</h2>
-                  <input type="text" name="stad" id="" placeholder="Vul je stad in" required>
+                  <input type="text" name="stad" id="" placeholder="Vul je stad in">
                   <h2>Uw rol is</h2>
-                  <input type="text" name="rol" id="" placeholder="medewerker">
+                  <input type="text" name="rol" id="" placeholder="">
                </section>
                <section class="se1">
                   <a href="" type="submit" name="submit" style="box-shadow: 0px 1px 5px; border-style:solid;"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-send-check" viewBox="0 0 16 16">
                         <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372l2.8-7Zm-2.54 1.183L5.93 9.363 1.591 6.602l11.833-4.733Z" />
                         <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z" />
                      </svg>Stuur je applicatie in</a>
+                  <button type="submit" class="shadow-sm btn btn-info" name="submit">Registreer gebruiker!</button>
                </section>
             </form>
          </section>
